@@ -1,68 +1,66 @@
-# Nasor Hidar | Software Engineer Portfolio
+# Nasor Hidar | Software Engineer & Security Specialist
 
 <div align="center">
-  <img alt="HTML5" src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"/>
-  <img alt="CSS3" src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white"/>
-  <img alt="JavaScript" src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/>
+  <img alt="Premium Design" src="https://img.shields.io/badge/Design-Premium_Glassmorphism-6366f1?style=for-the-badge"/>
+  <img alt="Responsive" src="https://img.shields.io/badge/Responsive-All_Devices-0ea5e9?style=for-the-badge"/>
+  <img alt="Performance" src="https://img.shields.io/badge/Performance-Optimized-10b981?style=for-the-badge"/>
 </div>
+
 <br/>
 
-A lightweight, fully responsive personal portfolio website showcasing my work in Software Engineering, Cybersecurity, and Competitive Programming. Built entirely from scratch without heavy frameworks to ensure maximum performance and maintainability.
+A high-end, professional portfolio showcasing my expertise in **Software Engineering**, **Cybersecurity**, and **Competitive Programming**. This redesign features a **Dark-First Glassmorphism** aesthetic, optimized for both visual impact and performance.
 
-🌍 **Live Demo:** [nasorhidar.com](https://nasorhidar.com)
+🌍 **Live Portfolio:** [nasorhidar.com](https://nasorhidar.com)
 
 ---
 
-## 📸 Preview
+## 📸 Redesign Highlights
 
-![Portfolio Preview](./preview.png)
+The portfolio has been overhauled with a modern "Security & Tech" theme:
+*   **Aesthetic:** Deep navy palette with indigo/sky-blue accents and backdrop-blur glass effects.
+*   **Interactivity:** Smooth **Animate on Scroll (AOS)** effects and dynamic navbar transitions.
+*   **Functional Contact:** Real-time email delivery integrated via **Formspree API**.
 
-## 🚀 Features
+## 🚀 Key Features
 
-* **Custom Architecture:** Clean, semantic HTML5 paired with modular CSS3 and ES6 JavaScript.
-* **Light/Dark Theme:** Built-in theme toggle that automatically detects system preferences and saves user overrides via local storage.
-* **Fully Responsive:** Adapts seamlessly to mobile, tablet, and desktop viewports using CSS Flexbox and Grid.
-* **Optimized Performance:** Zero external framework dependencies (aside from FontAwesome for typography/icons) for near-instant load times.
+*   **Cybersecurity Theme:** Tailored design that reflects a background in secure software development and VAPT.
+*   **Dual Theme Support:** Sophisticated theme toggling with persistent user preference storage.
+*   **Performance First:** Built with vanilla HTML5, CSS3, and ES6+ JS to ensure near-zero latency.
+*   **SEO Optimized:** Comprehensive meta tags and semantic structure for maximum visibility.
 
 ## 📂 Project Structure
 
 ```text
-├── index.html    # The semantic structure and content layout
-├── styles.css    # Custom CSS variables, responsive grids, and animations
-└── script.js     # Theme-switching logic and DOM manipulation
+├── index.html          # Semantic layout with integrated LaTeX data
+├── styles.css          # Premium design system & glassmorphism utilities
+├── script.js           # AOS logic, smooth scroll, and Formspree integration
+├── cyber_hero_bg.png   # High-tech abstract background asset
+└── chatnest_preview.png # Professional UI mockup for featured project
 ```
 
-## 💻 Highlighted Work Included
+## 🛠️ Technical Arsenal
 
-This portfolio actively showcases my core technical projects:
+*   **Languages:** Python, JavaScript, C/C++, Java, SQL, HTML/CSS
+*   **Engineering:** Django, React, Node.js, Express, RESTful APIs, System Architecture
+*   **Security:** Ethical Hacking, Vulnerability Assessment (VAPT), Kali Linux
+*   **Analysis:** NumPy, Pandas, Matplotlib
 
-* **Chat Nest:** Secure MERN stack messaging app with encrypted routing.
-* **Customer Queue Simulator:** Python/Tkinter CPU scheduling visualization.
-* **Skill Currency:** Scalable Python backend platform with role-based access.
+## 💻 Featured Work
 
-## 🛠️ Running Locally
+*   **ChatNest:** Secure MERN stack messaging app with encrypted data routing.
+*   **SkillCurrency:** Scalable Python/Django platform with role-based access control.
+*   **Queue System:** Interactive CPU scheduling simulator with real-time Gantt charts.
 
-Since this project utilizes pure vanilla web technologies, running it locally requires no build steps, package managers, or local servers:
+## 📥 Local Development
 
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/NasorHidar/nasorhidar.com.git](https://github.com/NasorHidar/nasorhidar.com.git)
-   ```
-2. **Navigate to the directory:**
-   ```bash
-   cd nasorhidar.com
-   ```
-3. **Launch the site:**
-   Simply double-click `index.html` to open it in your default web browser. Alternatively, use an extension like VS Code Live Server for hot-reloading while making edits.
-
-## 📬 Connect With Me
-
-* **Email:** [nasorhidar@gmail.com](mailto:nasorhidar@gmail.com)
-* **LinkedIn:** [in/nasor-hidar](https://www.linkedin.com/in/nasor-hidar/)
-* **Codeforces:** [Undefined_Code](https://codeforces.com/profile/Undefined_Code)
-* **CodeChef:** [undefined_code](https://www.codechef.com/users/undefined_code)
+1.  **Clone:** `git clone https://github.com/NasorHidar/nasorhidar.com.git`
+2.  **Navigate:** `cd nasorhidar.com`
+3.  **Launch:** Open `index.html` in any modern browser.
 
 ---
+
 <div align="center">
-  <i>Built with focus and precision.</i>
+  <i>Built with focus, precision, and Antigravity.</i>
+  <br/>
+  <b>© 2026 Nasor Hidar</b>
 </div>

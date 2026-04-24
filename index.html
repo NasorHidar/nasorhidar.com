@@ -1,205 +1,342 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nasor Hidar | Software Engineer</title>
+    <meta name="description"
+        content="Nasor Hidar - ICT Student & Software Engineer specializing in Cybersecurity and Secure Software Development. Portfolio featuring MERN, Django, and IoT projects.">
+    <meta name="keywords"
+        content="Nasor Hidar, Software Engineer, Cybersecurity, MERN Stack, Django, Jahangirnagar University, Portfolio">
+    <meta name="author" content="Nasor Hidar">
+    <title>Nasor Hidar | Software Engineer & Security Specialist</title>
+
+    <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Favicon placeholder -->
+    <link rel="icon" type="image/png" href="https://via.placeholder.com/32/6366f1/ffffff?text=NH">
 </head>
+
 <body>
 
-    <nav class="navbar">
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
         <div class="container nav-content">
-            <a href="#" class="logo">NH.</a>
+            <a href="#" class="logo">NASOR<span class="gradient-text">.</span></a>
             <div class="nav-links">
                 <a href="#about">About</a>
                 <a href="#skills">Skills</a>
                 <a href="#projects">Projects</a>
                 <a href="#achievements">Achievements</a>
-                <a href="#contact" class="btn btn-primary">Contact</a>
-                <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">
+                <a href="#contact" class="btn btn-secondary" style="padding: 0.5rem 1.25rem;">Contact</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
                     <i id="theme-icon" class="fas fa-moon"></i>
                 </button>
             </div>
         </div>
     </nav>
 
-    <header class="hero container">
-        <div class="hero-content">
-            <h1>Hi, I'm <span class="highlight">Nasor Hidar</span></h1>
-            <p class="subtitle">
-                A passionate developer and ICT student specializing in <strong>Cybersecurity and Security Software Development</strong>. I build secure, scalable solutions and actively solve algorithmic challenges.
-            </p>
-            <div class="hero-actions">
-                <a href="#projects" class="btn btn-primary">View My Work</a>
-                <a href="https://github.com/NasorHidar" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content" data-aos>
+            <span class="hero-tag">Available for secure software development</span>
+            <h1>Hi, I'm <span class="gradient-text">Nasor Hidar</span></h1>
+            <p>I architect secure, scalable solutions and solve algorithmic challenges. Specializing in <span
+                    style="color: var(--text-primary); font-weight: 600;">Cybersecurity</span> and <span
+                    style="color: var(--text-primary); font-weight: 600;">Security Software Development</span>.</p>
+            <div class="hero-btns">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="https://github.com/NasorHidar" target="_blank" class="btn btn-secondary">
                     <i class="fab fa-github"></i> GitHub
                 </a>
             </div>
         </div>
-    </header>
-
-    <section id="about" class="section bg-alt">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="card edu-card border-left-blue">
-                <div class="card-header">
-                    <h3>Jahangirnagar University</h3>
-                    <span class="badge">Feb 2023 - May 2027</span>
-                </div>
-                <p class="degree">B.Sc. in Information and Communication Technology</p>
-                <p class="location"><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</p>
-                <div class="cgpa-box">
-                    <strong>Current CGPA:</strong> <span class="highlight font-bold">3.70</span> (up to 5th semester)
-                </div>
-            </div>
-        </div>
     </section>
 
-    <section id="skills" class="section">
+    <!-- About / Education Section -->
+    <section id="about">
         <div class="container">
-            <h2 class="section-title">Technical Arsenal</h2>
-            <div class="grid grid-4">
-                <div class="card text-center">
-                    <div class="icon-box icon-blue"><i class="fas fa-code"></i></div>
-                    <h3>Languages</h3>
-                    <p>C, C++, Java, Python, Assembly, HTML, CSS, JavaScript</p>
-                </div>
-                <div class="card text-center">
-                    <div class="icon-box icon-purple"><i class="fas fa-layer-group"></i></div>
-                    <h3>Frameworks & Libs</h3>
-                    <p>MERN Stack, Django, NumPy, Pandas, Matplotlib</p>
-                </div>
-                <div class="card text-center">
-                    <div class="icon-box icon-green"><i class="fas fa-database"></i></div>
-                    <h3>Databases</h3>
-                    <p>MySQL, PostgreSQL</p>
-                </div>
-                <div class="card text-center">
-                    <div class="icon-box icon-red"><i class="fas fa-terminal"></i></div>
-                    <h3>Tools & OS</h3>
-                    <p>Windows, Kali Linux, Git, GitHub, Bitrix, Claude Code</p>
-                </div>
+            <div class="section-header" data-aos>
+                <h2>Education <span class="gradient-text">&</span> Background</h2>
+                <p>Currently pursuing a degree in Information and Communication Technology at Jahangirnagar University.
+                </p>
             </div>
-        </div>
-    </section>
 
-    <section id="projects" class="section bg-alt">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="grid grid-3">
-                <div class="card project-card border-top-blue">
-                    <div class="project-header">
-                        <h3>Chat Nest</h3>
-                        <span class="date-badge">Dec '25 - Present</span>
-                    </div>
-                    <p>A secure full-stack messaging application architected to ensure end-to-end data privacy using encrypted routing protocols and robust authentication.</p>
-                    <div class="tags">
-                        <span class="tag">MERN Stack</span>
-                        <span class="tag">Cryptography</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#"><i class="fab fa-github"></i> Code</a>
-                        <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
-                    </div>
-                </div>
-
-                <div class="card project-card border-top-green">
-                    <div class="project-header">
-                        <h3>Customer Queue Simulator</h3>
-                    </div>
-                    <p>An interactive simulator for preemptive CPU scheduling algorithms that generates real-time Gantt charts and statistical exports to optimize wait times.</p>
-                    <div class="tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">Tkinter</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#"><i class="fab fa-github"></i> Code</a>
-                        <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
-                    </div>
-                </div>
-
-                <div class="card project-card border-top-purple">
-                    <div class="project-header">
-                        <h3>Skill Currency</h3>
-                        <span class="date-badge">Jan '26 - Present</span>
-                    </div>
-                    <p>A scalable platform engineered with role-based access controls to support secure data flows and robust core system architecture.</p>
-                    <div class="tags">
-                        <span class="tag">Python Backend</span>
-                        <span class="tag">JS/HTML/CSS</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#"><i class="fab fa-github"></i> Code</a>
-                        <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
+            <div class="timeline" data-aos>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass">
+                        <span class="timeline-date">Feb 2023 — May 2027</span>
+                        <h3>B.Sc. in Information and Communication Technology</h3>
+                        <p style="color: var(--accent-secondary); font-weight: 600; margin-bottom: 0.5rem;">
+                            Jahangirnagar University • Dhaka</p>
+                        <div
+                            style="background: rgba(99, 102, 241, 0.1); padding: 0.75rem; border-radius: 0.5rem; display: inline-block;">
+                            <strong>Attending CGPA:</strong> <span class="gradient-text"
+                                style="font-size: 1.25rem; font-weight: 800;">3.70</span> <span
+                                style="font-size: 0.8rem; color: var(--text-muted);">(up to 5th semester)</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="achievements" class="section">
-        <div class="container grid grid-2">
-            <div>
-                <h2 class="section-title"><i class="fas fa-trophy highlight-yellow"></i> Certifications</h2>
-                <div class="stacked-cards">
-                    <div class="card">
-                        <h4>Arena Web Certified Professional (AWCP)</h4>
-                        <p class="text-muted">Arena Web Security</p>
-                    </div>
-                    <div class="card">
-                        <h4>BDSec CTF</h4>
-                        <p class="text-muted">Certificate of Achievement - Top 400</p>
-                    </div>
-                    <div class="card">
-                        <h4>Competitive Programming</h4>
-                        <ul class="link-list">
-                            <li><a href="https://codeforces.com/profile/Undefined_Code" target="_blank"><i class="fas fa-external-link-alt"></i> Codeforces: Rating 1254</a></li>
-                            <li><a href="https://www.codechef.com/users/undefined_code" target="_blank"><i class="fas fa-external-link-alt"></i> CodeChef: Rating 1244</a></li>
-                            <li><a href="https://icpc.global/private/profile/983585" target="_blank"><i class="fas fa-external-link-alt"></i> ICPC Global Profile</a></li>
-                        </ul>
-                        <ul class="text-list">
-                            <li>ICPC Asia Dhaka Regional Preliminary (2023, 2025)</li>
-                            <li>IEEE Xtreme 19.0 Contest (2023)</li>
-                        </ul>
-                    </div>
-                </div>
+    <!-- Technical Arsenal (Skills) -->
+    <section id="skills" style="background: rgba(99, 102, 241, 0.02);">
+        <div class="container">
+            <div class="section-header" data-aos>
+                <h2>Technical <span class="gradient-text">Arsenal</span></h2>
+                <p>A comprehensive list of tools and technologies I use to build robust software.</p>
             </div>
 
-            <div>
-                <h2 class="section-title"><i class="fas fa-hands-helping highlight-blue"></i> Volunteering</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <h4>Volunteer, FutureNations</h4>
-                        <p class="text-muted">A UNDP Project • Jul 2023</p>
+            <div class="skills-grid">
+                <div class="skill-card glass" data-aos>
+                    <div class="skill-icon"><i class="fas fa-code"></i></div>
+                    <h3>Core Languages</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">C/C++</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">HTML/CSS</span>
+                        <span class="skill-tag">SQL</span>
                     </div>
-                    <div class="timeline-item">
-                        <h4>Invigilator, 9th JUSC National Math Olympiad</h4>
-                        <p class="text-muted">Jul 2023</p>
+                </div>
+
+                <div class="skill-card glass" data-aos>
+                    <div class="skill-icon"><i class="fas fa-layer-group"></i></div>
+                    <h3>Frameworks & Engineering</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Django</span>
+                        <span class="skill-tag">React.js</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express.js</span>
+                        <span class="skill-tag">RESTful APIs</span>
+                        <span class="skill-tag">System Architecture</span>
                     </div>
-                    <div class="timeline-item">
-                        <h4>Volunteer, 5th JUSC National Science Festival</h4>
-                        <p class="text-muted">Jun 2023</p>
+                </div>
+
+                <div class="skill-card glass" data-aos>
+                    <div class="skill-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Security & Tools</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Ethical Hacking</span>
+                        <span class="skill-tag">VAPT</span>
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">Git/GitHub</span>
+                        <span class="skill-tag">PostgreSQL/MySQL</span>
+                        <span class="skill-tag">MongoDB</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer id="contact" class="footer">
+    <!-- Featured Projects -->
+    <section id="projects">
         <div class="container">
-            <h2>Let's Connect</h2>
-            <p>Whether you have a question or want to talk about cybersecurity and code, feel free to drop a message.</p>
-            <div class="contact-links">
-                <a href="mailto:nasorhidar@gmail.com" class="contact-btn"><i class="fas fa-envelope"></i> Email Me</a>
-                <a href="https://github.com/NasorHidar" target="_blank" class="contact-btn"><i class="fab fa-github"></i> GitHub</a>
-                <a href="https://www.linkedin.com/in/nasor-hidar/" target="_blank" class="contact-btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <div class="section-header" data-aos>
+                <h2>Featured <span class="gradient-text">Projects</span></h2>
+                <p>Real-world applications focusing on security, scalability, and user experience.</p>
             </div>
-            <p class="copyright">&copy; 2026 Nasor Hidar. Built with focus and precision.</p>
+
+            <div class="projects-grid">
+                <!-- ChatNest -->
+                <div class="project-card glass" data-aos>
+                    <div class="project-img" style="background-image: url('chatnest_preview_1777009619710.png');"></div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">MERN Stack</span>
+                            <span class="project-tag">Security</span>
+                        </div>
+                        <h3>ChatNest</h3>
+                        <p>Architected a secure full-stack messaging application with encrypted data routing protocols
+                            and robust user authentication.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/NasorHidar/ChatNest" target="_blank"><i
+                                    class="fab fa-github"></i> Code</a>
+                            <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SkillCurrency -->
+                <div class="project-card glass" data-aos>
+                    <div class="project-img"
+                        style="background-color: #1e1b4b; background-image: radial-gradient(circle, #312e81, #1e1b4b);">
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">Django</span>
+                            <span class="project-tag">FinTech</span>
+                        </div>
+                        <h3>SkillCurrency</h3>
+                        <p>A scalable platform engineered with role-based access controls to support secure data flows
+                            and robust core system architecture.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/NasorHidar/SkillCurrency" target="_blank"><i
+                                    class="fab fa-github"></i> Code</a>
+                            <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Queue System -->
+                <div class="project-card glass" data-aos>
+                    <div class="project-img"
+                        style="background-color: #064e3b; background-image: radial-gradient(circle, #065f46, #064e3b);">
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Tkinter</span>
+                        </div>
+                        <h3>Customer Queue System</h3>
+                        <p>Interactive simulator for preemptive CPU scheduling algorithms (SRTF) with real-time Gantt
+                            charts and statistical exports.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/NasorHidar/Customer-Queue-Management-System" target="_blank"><i
+                                    class="fab fa-github"></i> Code</a>
+                            <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements & Volunteering -->
+    <section id="achievements" style="background: rgba(99, 102, 241, 0.02);">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-info" data-aos>
+                    <h2>Achievements <span class="gradient-text">&</span> Activities</h2>
+                    <p>Continuous learning and contribution to the tech community.</p>
+
+                    <div class="skill-list" style="margin-bottom: 2rem;">
+                        <div class="glass" style="padding: 1rem; width: 100%; margin-bottom: 1rem;">
+                            <h4 style="color: var(--accent-primary); margin-bottom: 0.5rem;"><i
+                                    class="fas fa-trophy"></i> Certifications</h4>
+                            <ul style="list-style: none; color: var(--text-secondary); font-size: 0.9rem;">
+                                <li>• Software Engineer Intern Role — HackerRank <span
+                                        style="font-size: 0.75rem; color: var(--text-muted);">(ID: OD02023FD131)</span>
+                                </li>
+                                <li>• Arena Web Certified Professional — AWS <span
+                                        style="font-size: 0.75rem; color: var(--text-muted);">(ID: A58W0302S061)</span>
+                                </li>
+                                <li>• Python (Basic) Skill — HackerRank <span
+                                        style="font-size: 0.75rem; color: var(--text-muted);">(ID: 8A87793A29F3)</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="glass" style="padding: 1rem; width: 100%;">
+                            <h4 style="color: var(--accent-secondary); margin-bottom: 0.5rem;"><i
+                                    class="fas fa-keyboard"></i> Competitive Programming</h4>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.5rem;">
+                                Codeforces: <span class="gradient-text" style="font-weight: 700;">1254</span> (500+
+                                solved)<br>
+                                CodeChef: <span style="color: var(--accent-secondary); font-weight: 700;">1244</span>
+                                (50+ solved)
+                            </p>
+                            <p style="font-size: 0.8rem; color: var(--text-muted);">
+                                Participant in ICPC Asia Dhaka Regional Preliminary (2023, 2025)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-info" data-aos>
+                    <div class="glass" style="padding: 2rem;">
+                        <h3 style="margin-bottom: 1.5rem;"><i class="fas fa-hands-helping gradient-text"></i>
+                            Volunteering</h3>
+                        <div class="timeline" style="margin-top: 1rem;">
+                            <div class="timeline-item" style="margin-bottom: 1.5rem; padding-left: 40px;">
+                                <div class="timeline-dot" style="left: -1px; width: 12px; height: 12px;"></div>
+                                <h4 style="font-size: 1rem;">FutureNations (UNDP Project)</h4>
+                                <span style="font-size: 0.8rem; color: var(--accent-primary);">Apr 2026 — Present</span>
+                            </div>
+                            <div class="timeline-item" style="margin-bottom: 1.5rem; padding-left: 40px;">
+                                <div class="timeline-dot" style="left: -1px; width: 12px; height: 12px;"></div>
+                                <h4 style="font-size: 1rem;">Invigilator, 9th JUSC Math Olympiad</h4>
+                                <span style="font-size: 0.8rem; color: var(--accent-primary);">Jul 2023</span>
+                            </div>
+                            <div class="timeline-item" style="padding-left: 40px;">
+                                <div class="timeline-dot" style="left: -1px; width: 12px; height: 12px;"></div>
+                                <h4 style="font-size: 1rem;">Volunteer, 5th JUSC Science Festival</h4>
+                                <span style="font-size: 0.8rem; color: var(--accent-primary);">Jun 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-info" data-aos>
+                    <h2>Let's <span class="gradient-text">Connect</span></h2>
+                    <p>I'm always open to discussing new projects, security challenges, or professional opportunities.
+                    </p>
+
+                    <div style="margin-bottom: 2.5rem;">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                            <i class="fas fa-envelope gradient-text"></i>
+                            <span>nasorhidar@gmail.com</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <i class="fas fa-phone gradient-text"></i>
+                            <span>+880 1877695242</span>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://github.com/NasorHidar" target="_blank" class="social-btn"><i
+                                class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/nasor-hidar" target="_blank" class="social-btn"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="mailto:nasorhidar@gmail.com" class="social-btn"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <form class="contact-form glass" action="https://formspree.io/f/mlgaaklq" method="POST" data-aos>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..."
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                    <p id="form-status"
+                        style="margin-top: 1rem; font-size: 0.85rem; text-align: center; display: none;"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Nasor Hidar. All rights reserved.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.75rem;">Built with focus, precision, and <span
+                    class="gradient-text">Antigravity</span>.</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>
