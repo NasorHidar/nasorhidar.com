@@ -49,6 +49,7 @@ A premium, **multi-page personal portfolio** showcasing expertise in **Full-Stac
 ├── nav.js                  # Shared navbar injection (active state, scroll shrink, hamburger)
 ├── script.js               # AOS observer, typing effect, accordion, Formspree form handler
 ├── styles.css              # Design system — glassmorphism, AOS, terminal, rating bars, badges
+├── Nasor Hidar's Resume.pdf # Downloadable CV — linked from hero "Read Resume" button
 │
 ├── cyber_hero_bg.png       # Hero background — circuit board abstract
 ├── chatnest_preview_*.png  # ChatNest project preview image
