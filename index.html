@@ -1,342 +1,178 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Nasor Hidar - ICT Student & Software Engineer specializing in Cybersecurity and Secure Software Development. Portfolio featuring MERN, Django, and IoT projects.">
-    <meta name="keywords"
-        content="Nasor Hidar, Software Engineer, Cybersecurity, MERN Stack, Django, Jahangirnagar University, Portfolio">
-    <meta name="author" content="Nasor Hidar">
-    <title>Nasor Hidar | Software Engineer & Security Specialist</title>
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Favicon placeholder -->
-    <link rel="icon" type="image/png" href="https://via.placeholder.com/32/6366f1/ffffff?text=NH">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nasor Hidar — Full-Stack Developer & Secure System Designer. B.Sc. ICT at Jahangirnagar University.">
+  <title>Nasor Hidar | Full-Stack Developer & Secure System Designer</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
+<body class="bg-[#020817] text-slate-50 grid-bg">
 
-<body>
+<!-- HERO -->
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+  <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('cyber_hero_bg.png')"></div>
+  <div class="absolute inset-0" style="background:linear-gradient(to bottom,rgba(2,8,23,.78) 0%,rgba(2,8,23,.65) 50%,#020817 100%)"></div>
+  <div class="orb w-[480px] h-[480px] bg-cyan-500 opacity-[0.12]" style="top:-12%;left:-10%"></div>
+  <div class="orb w-72 h-72 bg-teal-400 opacity-[0.10]" style="bottom:8%;right:-6%"></div>
 
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="container nav-content">
-            <a href="#" class="logo">NASOR<span class="gradient-text">.</span></a>
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#achievements">Achievements</a>
-                <a href="#contact" class="btn btn-secondary" style="padding: 0.5rem 1.25rem;">Contact</a>
-                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
-                    <i id="theme-icon" class="fas fa-moon"></i>
-                </button>
-            </div>
+  <div class="relative z-10 max-w-4xl mx-auto px-6 text-center pt-28 pb-20">
+    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/5 text-cyan-400 text-sm font-medium mb-8" data-aos>
+      <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>Open to internships &amp; secure software roles
+    </div>
+    <h1 class="hero-title text-6xl md:text-7xl font-black tracking-tight text-white leading-tight mb-5" data-aos data-aos-delay="100">
+      Nasor Hidar<br>
+      <span class="gradient-text">Full-Stack Dev</span>
+      <span class="text-slate-400 text-4xl md:text-5xl"> &amp; Secure System Designer</span>
+    </h1>
+    <div class="flex items-center justify-center gap-2 text-base md:text-lg text-slate-400 mb-6 min-h-8" data-aos data-aos-delay="200">
+      <span class="font-mono text-cyan-400">&gt;_</span>
+      <span id="typed-text" class="font-mono text-slate-300"></span>
+      <span class="w-0.5 h-5 bg-cyan-400 animate-pulse"></span>
+    </div>
+    <p class="text-slate-400 text-base md:text-lg mb-10 max-w-2xl mx-auto leading-relaxed" data-aos data-aos-delay="250">
+      B.Sc. in ICT at <span class="text-white font-semibold">Jahangirnagar University</span>.
+      Building scalable applications and contributing to enterprise open-source.
+    </p>
+    <div class="flex flex-wrap justify-center gap-4 mb-12" data-aos data-aos-delay="300">
+      <a href="projects.html" id="cta-projects" class="px-8 py-4 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold rounded-xl transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/30 hover:-translate-y-1 inline-flex items-center gap-2">View Projects <i class="fas fa-arrow-right"></i></a>
+      <a href="#" id="cta-resume" class="px-8 py-4 border border-slate-700 hover:border-cyan-500/50 text-white font-semibold rounded-xl transition-all duration-300 hover:bg-slate-800/50 hover:-translate-y-1 inline-flex items-center gap-2"><i class="fas fa-file-alt text-cyan-400"></i> Read Resume</a>
+    </div>
+    <div class="flex items-center justify-center gap-4" data-aos data-aos-delay="350">
+      <a href="https://github.com/NasorHidar" target="_blank" id="s-gh" aria-label="GitHub" class="w-11 h-11 flex items-center justify-center rounded-xl bg-slate-800/60 border border-slate-700 hover:border-cyan-500/60 hover:text-cyan-400 text-slate-300 transition-all duration-300 hover:-translate-y-1"><i class="fab fa-github text-lg"></i></a>
+      <a href="https://www.linkedin.com/in/nasor-hidar" target="_blank" id="s-li" aria-label="LinkedIn" class="w-11 h-11 flex items-center justify-center rounded-xl bg-slate-800/60 border border-slate-700 hover:border-cyan-500/60 hover:text-cyan-400 text-slate-300 transition-all duration-300 hover:-translate-y-1"><i class="fab fa-linkedin text-lg"></i></a>
+      <a href="mailto:nasorhidar@gmail.com" id="s-em" aria-label="Email" class="w-11 h-11 flex items-center justify-center rounded-xl bg-slate-800/60 border border-slate-700 hover:border-cyan-500/60 hover:text-cyan-400 text-slate-300 transition-all duration-300 hover:-translate-y-1"><i class="fas fa-envelope text-lg"></i></a>
+    </div>
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-slate-600 text-xs animate-bounce"><i class="fas fa-chevron-down"></i></div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="py-28 px-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16" data-aos>
+      <span class="badge badge-cyan mb-4"><i class="fas fa-microchip mr-1"></i>Technical Arsenal</span>
+      <h2 class="text-4xl md:text-5xl font-black text-white mt-3">Skills &amp; <span class="gradient-text">Technologies</span></h2>
+      <div class="section-divider"></div>
+      <p class="text-slate-400 mt-5 max-w-xl mx-auto">Tools and technologies I use to architect robust, secure software.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="glass p-6" data-aos data-aos-delay="100">
+        <div class="flex items-center gap-3 mb-5"><div class="skill-icon-box"><i class="fas fa-code"></i></div><h3 class="font-bold text-white">Languages</h3></div>
+        <div class="flex flex-wrap gap-2"><span class="tech-tag">Python</span><span class="tech-tag">JavaScript</span><span class="tech-tag">C/C++</span><span class="tech-tag">Java</span><span class="tech-tag">SQL</span></div>
+      </div>
+      <div class="glass p-6" data-aos data-aos-delay="200">
+        <div class="flex items-center gap-3 mb-5"><div class="skill-icon-box" style="background:rgba(129,140,248,.1);border-color:rgba(129,140,248,.2);color:#818cf8"><i class="fas fa-layer-group"></i></div><h3 class="font-bold text-white">Frameworks</h3></div>
+        <div class="flex flex-wrap gap-2"><span class="tech-tag tech-tag-purple">Django</span><span class="tech-tag tech-tag-purple">React.js</span><span class="tech-tag tech-tag-purple">Node.js</span><span class="tech-tag tech-tag-purple">Express.js</span></div>
+      </div>
+      <div class="glass p-6" data-aos data-aos-delay="300">
+        <div class="flex items-center gap-3 mb-5"><div class="skill-icon-box" style="background:rgba(45,212,191,.1);border-color:rgba(45,212,191,.2);color:#2dd4bf"><i class="fas fa-flask"></i></div><h3 class="font-bold text-white">Testing &amp; QA</h3></div>
+        <div class="flex flex-wrap gap-2"><span class="tech-tag tech-tag-teal">PyTest</span><span class="tech-tag tech-tag-teal">Jest</span><span class="tech-tag tech-tag-teal">Selenium</span><span class="tech-tag tech-tag-teal">CI/CD</span></div>
+      </div>
+      <div class="glass p-6" data-aos data-aos-delay="400">
+        <div class="flex items-center gap-3 mb-5"><div class="skill-icon-box" style="background:rgba(239,68,68,.1);border-color:rgba(239,68,68,.2);color:#f87171"><i class="fas fa-shield-halved"></i></div><h3 class="font-bold text-white">Security &amp; Arch</h3></div>
+        <div class="flex flex-wrap gap-2"><span class="tech-tag" style="border-color:rgba(248,113,113,.25);color:#f87171;background:rgba(239,68,68,.08)">PostgreSQL</span><span class="tech-tag" style="border-color:rgba(248,113,113,.25);color:#f87171;background:rgba(239,68,68,.08)">RBAC</span><span class="tech-tag" style="border-color:rgba(248,113,113,.25);color:#f87171;background:rgba(239,68,68,.08)">VAPT</span><span class="tech-tag" style="border-color:rgba(248,113,113,.25);color:#f87171;background:rgba(239,68,68,.08)">AES-256</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-24 px-6" style="background:linear-gradient(to bottom,rgba(6,182,212,.025),transparent)">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16" data-aos>
+      <span class="badge badge-teal mb-4"><i class="fas fa-user mr-1"></i>About Me</span>
+      <h2 class="text-4xl md:text-5xl font-black text-white mt-3">Education &amp; <span class="gradient-text">Background</span></h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div data-aos="fade-right">
+        <h3 class="text-2xl font-bold text-white mb-4">Building at the intersection of <span class="gradient-text">security &amp; scalability</span></h3>
+        <p class="text-slate-400 leading-relaxed mb-5">I'm a 3rd-year ICT student at Jahangirnagar University with a strong focus on full-stack engineering and secure software design. I build systems with RBAC, encrypted data flows, and CI/CD-hardened backends.</p>
+        <p class="text-slate-400 leading-relaxed mb-6">Beyond coursework, I actively contribute to enterprise open-source projects — including OWASP DefectDojo — and compete in ICPC and IEEE Xtreme programming contests.</p>
+        <div class="flex flex-wrap gap-3">
+          <span class="badge badge-cyan"><i class="fas fa-map-marker-alt mr-1"></i>Dhaka, Bangladesh</span>
+          <span class="badge badge-teal"><i class="fas fa-graduation-cap mr-1"></i>CGPA: 3.70</span>
+          <span class="badge badge-green"><i class="fas fa-circle mr-1 text-xs"></i>Available</span>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container hero-content" data-aos>
-            <span class="hero-tag">Available for secure software development</span>
-            <h1>Hi, I'm <span class="gradient-text">Nasor Hidar</span></h1>
-            <p>I architect secure, scalable solutions and solve algorithmic challenges. Specializing in <span
-                    style="color: var(--text-primary); font-weight: 600;">Cybersecurity</span> and <span
-                    style="color: var(--text-primary); font-weight: 600;">Security Software Development</span>.</p>
-            <div class="hero-btns">
-                <a href="#projects" class="btn btn-primary">View Projects</a>
-                <a href="https://github.com/NasorHidar" target="_blank" class="btn btn-secondary">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
+      </div>
+      <div data-aos="fade-left" data-aos-delay="150">
+        <div class="glow-card glow-card-featured p-8">
+          <div class="flex items-start gap-4 mb-6">
+            <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex-shrink-0">🎓</div>
+            <div>
+              <h3 class="text-xl font-bold text-white">B.Sc. in Information &amp; Communication Technology</h3>
+              <p class="text-cyan-400 font-semibold mt-1">Jahangirnagar University, Dhaka</p>
+              <p class="text-slate-500 text-sm mt-1">Feb 2023 — May 2027 (Expected)</p>
             </div>
+          </div>
+          <div class="flex items-center gap-6 pt-5 border-t border-slate-800">
+            <div>
+              <p class="text-slate-500 text-xs uppercase tracking-widest font-semibold mb-1">CGPA</p>
+              <p class="stat-number gradient-text text-4xl">3.70</p>
+              <p class="text-slate-600 text-xs mt-1">Up to 5th Semester</p>
+            </div>
+            <div class="w-px h-16 bg-slate-800 flex-shrink-0"></div>
+            <div>
+              <p class="text-slate-500 text-xs uppercase tracking-widest font-semibold mb-2">Coursework</p>
+              <div class="flex flex-wrap gap-1.5"><span class="tech-tag">Data Structures</span><span class="tech-tag">OS</span><span class="tech-tag">Networks</span><span class="tech-tag">Security</span></div>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+    <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-5" data-aos data-aos-delay="200">
+      <div class="glass-static p-5 flex items-center gap-4"><div class="w-10 h-10 rounded-xl bg-teal-500/10 border border-teal-500/20 flex items-center justify-center text-teal-400 flex-shrink-0"><i class="fas fa-hands-helping"></i></div><div><p class="text-white font-semibold text-sm">FutureNations (UNDP Project)</p><p class="text-slate-500 text-xs">Volunteer · Apr 2026 — Present</p></div></div>
+      <div class="glass-static p-5 flex items-center gap-4"><div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 flex-shrink-0"><i class="fas fa-trophy"></i></div><div><p class="text-white font-semibold text-sm">Invigilator, 9th JUSC Math Olympiad</p><p class="text-slate-500 text-xs">Jul 2023</p></div></div>
+      <div class="glass-static p-5 flex items-center gap-4"><div class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 flex-shrink-0"><i class="fas fa-flask"></i></div><div><p class="text-white font-semibold text-sm">Volunteer, 5th JUSC Science Festival</p><p class="text-slate-500 text-xs">Jun 2023</p></div></div>
+    </div>
+  </div>
+</section>
 
-    <!-- About / Education Section -->
-    <section id="about">
-        <div class="container">
-            <div class="section-header" data-aos>
-                <h2>Education <span class="gradient-text">&</span> Background</h2>
-                <p>Currently pursuing a degree in Information and Communication Technology at Jahangirnagar University.
-                </p>
-            </div>
-
-            <div class="timeline" data-aos>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content glass">
-                        <span class="timeline-date">Feb 2023 — May 2027</span>
-                        <h3>B.Sc. in Information and Communication Technology</h3>
-                        <p style="color: var(--accent-secondary); font-weight: 600; margin-bottom: 0.5rem;">
-                            Jahangirnagar University • Dhaka</p>
-                        <div
-                            style="background: rgba(99, 102, 241, 0.1); padding: 0.75rem; border-radius: 0.5rem; display: inline-block;">
-                            <strong>Attending CGPA:</strong> <span class="gradient-text"
-                                style="font-size: 1.25rem; font-weight: 800;">3.70</span> <span
-                                style="font-size: 0.8rem; color: var(--text-muted);">(up to 5th semester)</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!-- CONTACT -->
+<section id="contact" class="py-28 px-6">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-14" data-aos>
+      <span class="badge badge-indigo mb-4"><i class="fas fa-paper-plane mr-1"></i>Contact</span>
+      <h2 class="text-4xl md:text-5xl font-black text-white mt-3">Let's <span class="gradient-text">Connect</span></h2>
+      <div class="section-divider"></div>
+      <p class="text-slate-400 mt-5">Open to projects, collaborations, and opportunities.</p>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 items-start">
+      <div class="lg:col-span-2 flex flex-col gap-5" data-aos="fade-right">
+        <a href="mailto:nasorhidar@gmail.com" class="glass p-5 flex items-center gap-4 group"><div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 text-lg group-hover:bg-cyan-500 group-hover:text-slate-950 transition-all duration-300 flex-shrink-0"><i class="fas fa-envelope"></i></div><div><p class="text-slate-400 text-xs uppercase tracking-wider mb-0.5">Email</p><p class="text-white font-medium text-sm">nasorhidar@gmail.com</p></div></a>
+        <a href="https://www.linkedin.com/in/nasor-hidar" target="_blank" class="glass p-5 flex items-center gap-4 group"><div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-lg group-hover:bg-blue-500 group-hover:text-white transition-all duration-300 flex-shrink-0"><i class="fab fa-linkedin"></i></div><div><p class="text-slate-400 text-xs uppercase tracking-wider mb-0.5">LinkedIn</p><p class="text-white font-medium text-sm">nasor-hidar</p></div></a>
+        <a href="https://github.com/NasorHidar" target="_blank" class="glass p-5 flex items-center gap-4 group"><div class="w-12 h-12 rounded-xl bg-slate-700/50 border border-slate-600/50 flex items-center justify-center text-slate-300 text-lg group-hover:bg-white group-hover:text-slate-950 transition-all duration-300 flex-shrink-0"><i class="fab fa-github"></i></div><div><p class="text-slate-400 text-xs uppercase tracking-wider mb-0.5">GitHub</p><p class="text-white font-medium text-sm">NasorHidar</p></div></a>
+      </div>
+      <form id="contact-form" action="https://formspree.io/f/mlgaaklq" method="POST" class="lg:col-span-3 glass-static p-8" data-aos="fade-left" data-aos-delay="150">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
+          <div><label for="cf-name" class="block text-slate-400 text-sm mb-2 font-medium">Name</label><input id="cf-name" name="name" type="text" required placeholder="John Doe" class="w-full px-4 py-3 rounded-xl bg-slate-800/60 border border-slate-700 text-white placeholder-slate-600 focus:border-cyan-500/60 outline-none transition-all text-sm"></div>
+          <div><label for="cf-email" class="block text-slate-400 text-sm mb-2 font-medium">Email</label><input id="cf-email" name="email" type="email" required placeholder="you@email.com" class="w-full px-4 py-3 rounded-xl bg-slate-800/60 border border-slate-700 text-white placeholder-slate-600 focus:border-cyan-500/60 outline-none transition-all text-sm"></div>
         </div>
-    </section>
+        <div class="mb-5"><label for="cf-msg" class="block text-slate-400 text-sm mb-2 font-medium">Message</label><textarea id="cf-msg" name="message" rows="5" required placeholder="Tell me about your project…" class="w-full px-4 py-3 rounded-xl bg-slate-800/60 border border-slate-700 text-white placeholder-slate-600 focus:border-cyan-500/60 outline-none transition-all text-sm resize-none"></textarea></div>
+        <button id="submit-btn" type="submit" class="w-full py-4 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25 hover:-translate-y-0.5">Send Message <i class="fas fa-paper-plane ml-2"></i></button>
+        <span id="form-status" class="hidden"></span>
+      </form>
+    </div>
+  </div>
+</section>
 
-    <!-- Technical Arsenal (Skills) -->
-    <section id="skills" style="background: rgba(99, 102, 241, 0.02);">
-        <div class="container">
-            <div class="section-header" data-aos>
-                <h2>Technical <span class="gradient-text">Arsenal</span></h2>
-                <p>A comprehensive list of tools and technologies I use to build robust software.</p>
-            </div>
+<!-- FOOTER -->
+<footer class="border-t border-slate-800/60 py-10 px-6">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+    <p class="text-slate-500 text-sm">© 2026 <span class="text-white font-semibold">Nasor Hidar</span>. All rights reserved.</p>
+    <p class="text-slate-600 text-xs">Built with <span class="text-red-400">❤</span> Love.</p>
+    <div class="flex gap-5">
+      <a href="https://github.com/NasorHidar" target="_blank" class="text-slate-600 hover:text-cyan-400 transition-colors"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/nasor-hidar" target="_blank" class="text-slate-600 hover:text-cyan-400 transition-colors"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:nasorhidar@gmail.com" class="text-slate-600 hover:text-cyan-400 transition-colors"><i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
+</footer>
 
-            <div class="skills-grid">
-                <div class="skill-card glass" data-aos>
-                    <div class="skill-icon"><i class="fas fa-code"></i></div>
-                    <h3>Core Languages</h3>
-                    <div class="skill-list">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">C/C++</span>
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">HTML/CSS</span>
-                        <span class="skill-tag">SQL</span>
-                    </div>
-                </div>
-
-                <div class="skill-card glass" data-aos>
-                    <div class="skill-icon"><i class="fas fa-layer-group"></i></div>
-                    <h3>Frameworks & Engineering</h3>
-                    <div class="skill-list">
-                        <span class="skill-tag">Django</span>
-                        <span class="skill-tag">React.js</span>
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">Express.js</span>
-                        <span class="skill-tag">RESTful APIs</span>
-                        <span class="skill-tag">System Architecture</span>
-                    </div>
-                </div>
-
-                <div class="skill-card glass" data-aos>
-                    <div class="skill-icon"><i class="fas fa-shield-alt"></i></div>
-                    <h3>Security & Tools</h3>
-                    <div class="skill-list">
-                        <span class="skill-tag">Ethical Hacking</span>
-                        <span class="skill-tag">VAPT</span>
-                        <span class="skill-tag">Linux</span>
-                        <span class="skill-tag">Git/GitHub</span>
-                        <span class="skill-tag">PostgreSQL/MySQL</span>
-                        <span class="skill-tag">MongoDB</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Featured Projects -->
-    <section id="projects">
-        <div class="container">
-            <div class="section-header" data-aos>
-                <h2>Featured <span class="gradient-text">Projects</span></h2>
-                <p>Real-world applications focusing on security, scalability, and user experience.</p>
-            </div>
-
-            <div class="projects-grid">
-                <!-- ChatNest -->
-                <div class="project-card glass" data-aos>
-                    <div class="project-img" style="background-image: url('chatnest_preview_1777009619710.png');"></div>
-                    <div class="project-info">
-                        <div class="project-tags">
-                            <span class="project-tag">MERN Stack</span>
-                            <span class="project-tag">Security</span>
-                        </div>
-                        <h3>ChatNest</h3>
-                        <p>Architected a secure full-stack messaging application with encrypted data routing protocols
-                            and robust user authentication.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/NasorHidar/ChatNest" target="_blank"><i
-                                    class="fab fa-github"></i> Code</a>
-                            <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SkillCurrency -->
-                <div class="project-card glass" data-aos>
-                    <div class="project-img"
-                        style="background-color: #1e1b4b; background-image: radial-gradient(circle, #312e81, #1e1b4b);">
-                    </div>
-                    <div class="project-info">
-                        <div class="project-tags">
-                            <span class="project-tag">Django</span>
-                            <span class="project-tag">FinTech</span>
-                        </div>
-                        <h3>SkillCurrency</h3>
-                        <p>A scalable platform engineered with role-based access controls to support secure data flows
-                            and robust core system architecture.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/NasorHidar/SkillCurrency" target="_blank"><i
-                                    class="fab fa-github"></i> Code</a>
-                            <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Queue System -->
-                <div class="project-card glass" data-aos>
-                    <div class="project-img"
-                        style="background-color: #064e3b; background-image: radial-gradient(circle, #065f46, #064e3b);">
-                    </div>
-                    <div class="project-info">
-                        <div class="project-tags">
-                            <span class="project-tag">Python</span>
-                            <span class="project-tag">Tkinter</span>
-                        </div>
-                        <h3>Customer Queue System</h3>
-                        <p>Interactive simulator for preemptive CPU scheduling algorithms (SRTF) with real-time Gantt
-                            charts and statistical exports.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/NasorHidar/Customer-Queue-Management-System" target="_blank"><i
-                                    class="fab fa-github"></i> Code</a>
-                            <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Achievements & Volunteering -->
-    <section id="achievements" style="background: rgba(99, 102, 241, 0.02);">
-        <div class="container">
-            <div class="contact-container">
-                <div class="contact-info" data-aos>
-                    <h2>Achievements <span class="gradient-text">&</span> Activities</h2>
-                    <p>Continuous learning and contribution to the tech community.</p>
-
-                    <div class="skill-list" style="margin-bottom: 2rem;">
-                        <div class="glass" style="padding: 1rem; width: 100%; margin-bottom: 1rem;">
-                            <h4 style="color: var(--accent-primary); margin-bottom: 0.5rem;"><i
-                                    class="fas fa-trophy"></i> Certifications</h4>
-                            <ul style="list-style: none; color: var(--text-secondary); font-size: 0.9rem;">
-                                <li>• Software Engineer Intern Role — HackerRank <span
-                                        style="font-size: 0.75rem; color: var(--text-muted);">(ID: OD02023FD131)</span>
-                                </li>
-                                <li>• Arena Web Certified Professional — AWS <span
-                                        style="font-size: 0.75rem; color: var(--text-muted);">(ID: A58W0302S061)</span>
-                                </li>
-                                <li>• Python (Basic) Skill — HackerRank <span
-                                        style="font-size: 0.75rem; color: var(--text-muted);">(ID: 8A87793A29F3)</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="glass" style="padding: 1rem; width: 100%;">
-                            <h4 style="color: var(--accent-secondary); margin-bottom: 0.5rem;"><i
-                                    class="fas fa-keyboard"></i> Competitive Programming</h4>
-                            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.5rem;">
-                                Codeforces: <span class="gradient-text" style="font-weight: 700;">1254</span> (500+
-                                solved)<br>
-                                CodeChef: <span style="color: var(--accent-secondary); font-weight: 700;">1244</span>
-                                (50+ solved)
-                            </p>
-                            <p style="font-size: 0.8rem; color: var(--text-muted);">
-                                Participant in ICPC Asia Dhaka Regional Preliminary (2023, 2025)
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="contact-info" data-aos>
-                    <div class="glass" style="padding: 2rem;">
-                        <h3 style="margin-bottom: 1.5rem;"><i class="fas fa-hands-helping gradient-text"></i>
-                            Volunteering</h3>
-                        <div class="timeline" style="margin-top: 1rem;">
-                            <div class="timeline-item" style="margin-bottom: 1.5rem; padding-left: 40px;">
-                                <div class="timeline-dot" style="left: -1px; width: 12px; height: 12px;"></div>
-                                <h4 style="font-size: 1rem;">FutureNations (UNDP Project)</h4>
-                                <span style="font-size: 0.8rem; color: var(--accent-primary);">Apr 2026 — Present</span>
-                            </div>
-                            <div class="timeline-item" style="margin-bottom: 1.5rem; padding-left: 40px;">
-                                <div class="timeline-dot" style="left: -1px; width: 12px; height: 12px;"></div>
-                                <h4 style="font-size: 1rem;">Invigilator, 9th JUSC Math Olympiad</h4>
-                                <span style="font-size: 0.8rem; color: var(--accent-primary);">Jul 2023</span>
-                            </div>
-                            <div class="timeline-item" style="padding-left: 40px;">
-                                <div class="timeline-dot" style="left: -1px; width: 12px; height: 12px;"></div>
-                                <h4 style="font-size: 1rem;">Volunteer, 5th JUSC Science Festival</h4>
-                                <span style="font-size: 0.8rem; color: var(--accent-primary);">Jun 2023</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <div class="contact-container">
-                <div class="contact-info" data-aos>
-                    <h2>Let's <span class="gradient-text">Connect</span></h2>
-                    <p>I'm always open to discussing new projects, security challenges, or professional opportunities.
-                    </p>
-
-                    <div style="margin-bottom: 2.5rem;">
-                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                            <i class="fas fa-envelope gradient-text"></i>
-                            <span>nasorhidar@gmail.com</span>
-                        </div>
-                        <div style="display: flex; align-items: center; gap: 1rem;">
-                            <i class="fas fa-phone gradient-text"></i>
-                            <span>+880 1877695242</span>
-                        </div>
-                    </div>
-
-                    <div class="social-links">
-                        <a href="https://github.com/NasorHidar" target="_blank" class="social-btn"><i
-                                class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/nasor-hidar" target="_blank" class="social-btn"><i
-                                class="fab fa-linkedin"></i></a>
-                        <a href="mailto:nasorhidar@gmail.com" class="social-btn"><i class="fas fa-envelope"></i></a>
-                    </div>
-                </div>
-
-                <form class="contact-form glass" action="https://formspree.io/f/mlgaaklq" method="POST" data-aos>
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..."
-                            required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
-                    <p id="form-status"
-                        style="margin-top: 1rem; font-size: 0.85rem; text-align: center; display: none;"></p>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Nasor Hidar. All rights reserved.</p>
-            <p style="margin-top: 0.5rem; font-size: 0.75rem;">Built with focus, precision, and <span
-                    class="gradient-text">Antigravity</span>.</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+<script src="nav.js"></script>
+<script src="script.js"></script>
 </body>
-
 </html>

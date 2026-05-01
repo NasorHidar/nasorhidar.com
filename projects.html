@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Technical projects by Nasor Hidar — SkillCurrency, ChatNest, Queue Management System, and more.">
+  <title>Projects | Nasor Hidar</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#020817] text-slate-50 grid-bg">
+
+<!-- PAGE HERO -->
+<section class="relative pt-36 pb-0 px-6 overflow-hidden">
+  <div class="orb w-[500px] h-[500px] bg-indigo-500 opacity-[0.07]" style="top:-15%;left:-8%"></div>
+  <div class="orb w-72 h-72 bg-cyan-500 opacity-[0.06]" style="bottom:0;right:-5%"></div>
+  <div class="max-w-6xl mx-auto relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center min-h-[420px]">
+      <!-- Text -->
+      <div class="pb-16 lg:pb-20">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/5 text-cyan-400 text-sm font-medium mb-6" data-aos>
+          <i class="fas fa-terminal mr-1"></i>Technical Projects
+        </div>
+        <h1 class="text-5xl md:text-6xl font-black text-white leading-tight mb-5" data-aos data-aos-delay="100">
+          What I've<br><span class="gradient-text">Built</span>
+        </h1>
+        <p class="text-slate-400 text-lg leading-relaxed max-w-xl" data-aos data-aos-delay="200">
+          Real-world applications focused on security, scalability, and engineering excellence.
+        </p>
+        <div class="flex flex-wrap gap-3 mt-7" data-aos data-aos-delay="300">
+          <span class="badge badge-cyan"><i class="fab fa-python mr-1"></i>Django</span>
+          <span class="badge badge-indigo"><i class="fas fa-layer-group mr-1"></i>MERN Stack</span>
+          <span class="badge badge-teal"><i class="fas fa-shield-halved mr-1"></i>RBAC &amp; AES-256</span>
+        </div>
+      </div>
+      <!-- Hero Image -->
+      <div class="hidden lg:flex items-end justify-end h-full" data-aos="fade-left" data-aos-delay="200">
+        <div class="relative w-full max-w-lg">
+          <div class="absolute inset-0 rounded-3xl" style="background:radial-gradient(ellipse at center,rgba(129,140,248,0.12) 0%,transparent 70%)"></div>
+          <img src="hero_projects.png" alt="Technical project cards visualization" class="w-full rounded-3xl relative z-10" style="filter:drop-shadow(0 0 40px rgba(99,102,241,0.2))">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="absolute bottom-0 left-0 right-0 h-24" style="background:linear-gradient(to bottom,transparent,#020817)"></div>
+</section>
+
+<!-- FEATURED PROJECTS -->
+<section class="py-20 px-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-14" data-aos>
+      <span class="badge badge-cyan mb-3"><i class="fas fa-rocket mr-1"></i>Featured</span>
+      <h2 class="text-3xl md:text-4xl font-black text-white mt-3">Featured <span class="gradient-text">Projects</span></h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="flex flex-col gap-10">
+
+      <!-- SkillCurrency -->
+      <div class="glow-card glow-card-featured p-8 md:p-10" data-aos data-aos-delay="100">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+          <!-- Visual -->
+          <div class="lg:col-span-1">
+            <div class="rounded-2xl overflow-hidden h-52 flex items-center justify-center relative" style="background:linear-gradient(135deg,#1e1b4b 0%,#312e81 50%,#1e3a5f 100%)">
+              <div class="absolute inset-0 opacity-20" style="background-image:radial-gradient(rgba(129,140,248,.3) 1px,transparent 1px);background-size:24px 24px"></div>
+              <div class="relative text-center">
+                <div class="text-6xl mb-3">💱</div>
+                <p class="text-indigo-300 font-mono text-xs tracking-widest">SKILLCURRENCY</p>
+              </div>
+            </div>
+            <div class="flex gap-3 mt-4">
+              <a href="https://github.com/NasorHidar/SkillCurrency" target="_blank" id="skillcurrency-repo" class="flex-1 py-3 flex items-center justify-center gap-2 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white font-semibold text-sm transition-all duration-300 hover:-translate-y-0.5"><i class="fab fa-github"></i>Source Code</a>
+            </div>
+          </div>
+          <!-- Info -->
+          <div class="lg:col-span-2">
+            <div class="flex items-center gap-3 mb-4">
+              <h3 class="text-2xl font-black text-white">SkillCurrency</h3>
+              <span class="badge badge-indigo text-xs">FinTech · Career Hub</span>
+            </div>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="tech-tag">Django</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag tech-tag-purple">RBAC</span>
+              <span class="tech-tag tech-tag-teal">REST API</span>
+              <span class="tech-tag">Celery</span>
+            </div>
+            <p class="text-slate-400 leading-relaxed mb-5">A scalable financial and career hub featuring <strong class="text-white">role-based access control across 3 user tiers</strong> (Admin, Skilled Provider, Client) and a custom transaction tracking module for escrow-protected job settlements.</p>
+            <ul class="space-y-2.5 text-sm text-slate-400">
+              <li class="flex items-start gap-3"><span class="text-cyan-400 mt-0.5"><i class="fas fa-chevron-right text-xs"></i></span>Engineered multi-role RBAC with granular permission layers for marketplace, workspace, and financial hub modules</li>
+              <li class="flex items-start gap-3"><span class="text-cyan-400 mt-0.5"><i class="fas fa-chevron-right text-xs"></i></span>Built a custom escrow transaction module with milestone-based fund release and dispute resolution</li>
+              <li class="flex items-start gap-3"><span class="text-cyan-400 mt-0.5"><i class="fas fa-chevron-right text-xs"></i></span>Integrated Celery for async background tasks — notifications, fund processing, and identity verification</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- ChatNest -->
+      <div class="glow-card glow-card-featured p-8 md:p-10" data-aos data-aos-delay="150">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+          <div class="lg:col-span-1">
+            <div class="rounded-2xl overflow-hidden h-52">
+              <img src="chatnest_preview_1777009619710.png" alt="ChatNest preview" class="w-full h-full object-cover">
+            </div>
+            <div class="flex gap-3 mt-4">
+              <a href="https://github.com/NasorHidar/ChatNest" target="_blank" id="chatnest-repo" class="flex-1 py-3 flex items-center justify-center gap-2 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white font-semibold text-sm transition-all duration-300 hover:-translate-y-0.5"><i class="fab fa-github"></i>Source Code</a>
+            </div>
+          </div>
+          <div class="lg:col-span-2">
+            <div class="flex items-center gap-3 mb-4">
+              <h3 class="text-2xl font-black text-white">ChatNest</h3>
+              <span class="badge badge-green text-xs">Real-Time · Secure Messaging</span>
+            </div>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="tech-tag">MongoDB</span>
+              <span class="tech-tag">Express.js</span>
+              <span class="tech-tag">React.js</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag tech-tag-purple">JWT</span>
+              <span class="tech-tag" style="color:#f87171;border-color:rgba(248,113,113,.25);background:rgba(239,68,68,.08)">AES-256</span>
+              <span class="tech-tag tech-tag-teal">WebSockets</span>
+            </div>
+            <p class="text-slate-400 leading-relaxed mb-5">A secure messaging application handling <strong class="text-white">100+ concurrent socket connections</strong> with end-to-end data privacy via encrypted routing and robust JWT-based session management.</p>
+            <ul class="space-y-2.5 text-sm text-slate-400">
+              <li class="flex items-start gap-3"><span class="text-cyan-400 mt-0.5"><i class="fas fa-chevron-right text-xs"></i></span>Implemented AES-256 encrypted message routing for end-to-end data privacy</li>
+              <li class="flex items-start gap-3"><span class="text-cyan-400 mt-0.5"><i class="fas fa-chevron-right text-xs"></i></span>Architected Socket.IO event management supporting 100+ simultaneous connections with room isolation</li>
+              <li class="flex items-start gap-3"><span class="text-cyan-400 mt-0.5"><i class="fas fa-chevron-right text-xs"></i></span>Designed JWT refresh token rotation with httpOnly cookie storage to prevent XSS-based session theft</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Queue System -->
+      <div class="glow-card glow-card-featured p-8 md:p-10" data-aos data-aos-delay="200">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+          <div class="lg:col-span-1">
+            <div class="rounded-2xl overflow-hidden h-52 flex items-center justify-center relative" style="background:linear-gradient(135deg,#064e3b 0%,#065f46 50%,#047857 100%)">
+              <div class="absolute inset-0 opacity-20" style="background-image:radial-gradient(rgba(52,211,153,.3) 1px,transparent 1px);background-size:24px 24px"></div>
+              <div class="relative text-center">
+                <div class="text-6xl mb-3">📊</div>
+                <p class="text-green-300 font-mono text-xs tracking-widest">QUEUE SIM</p>
+              </div>
+            </div>
+            <div class="flex gap-3 mt-4">
+              <a href="https://github.com/NasorHidar/Customer-Queue-Management-System" target="_blank" id="queue-repo" class="flex-1 py-3 flex items-center justify-center gap-2 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white font-semibold text-sm transition-all duration-300 hover:-translate-y-0.5"><i class="fab fa-github"></i>Source Code</a>
+            </div>
+          </div>
+          <div class="lg:col-span-2">
+            <div class="flex items-center gap-3 mb-4">
+              <h3 class="text-2xl font-black text-white">Customer Queue Management System</h3>
+              <span class="badge badge-teal text-xs">OS Algorithms · Simulation</span>
+            </div>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Tkinter</span>
+              <span class="tech-tag tech-tag-teal">OS Algorithms</span>
+              <span class="tech-tag tech-tag-teal">Gantt Charts</span>
+            </div>
+            <p class="text-slate-400 leading-relaxed mb-5">An interactive CPU scheduling simulator generating <strong class="text-white">real-time Gantt charts</strong> to benchmark wait times and turnaround times across multiple preemptive and non-preemptive scheduling algorithms.</p>
+            <ul class="space-y-2.5 text-sm text-slate-400">
+              <li class="flex items-start gap-3"><span class="text-cyan-400 mt-0.5"><i class="fas fa-chevron-right text-xs"></i></span>Implemented FCFS, SJF, SRTF, Round Robin, and Priority scheduling algorithms with real-time visualization</li>
+              <li class="flex items-start gap-3"><span class="text-cyan-400 mt-0.5"><i class="fas fa-chevron-right text-xs"></i></span>Rendered interactive Gantt chart with color-coded process blocks using Tkinter canvas</li>
+              <li class="flex items-start gap-3"><span class="text-cyan-400 mt-0.5"><i class="fas fa-chevron-right text-xs"></i></span>Exported statistical reports — average wait time, turnaround time, CPU utilization</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACADEMIC MINI-PROJECTS -->
+<section class="py-20 px-6" style="background:linear-gradient(to bottom,rgba(6,182,212,.025),transparent)">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-12" data-aos>
+      <span class="badge badge-indigo mb-3"><i class="fas fa-graduation-cap mr-1"></i>Academic</span>
+      <h2 class="text-3xl md:text-4xl font-black text-white mt-3">Academic <span class="gradient-text">Mini-Projects</span></h2>
+      <div class="section-divider"></div>
+      <p class="text-slate-400 mt-5 max-w-lg mx-auto">Coursework projects demonstrating foundational CS concepts and language proficiency.</p>
+    </div>
+
+    <div class="space-y-4" data-aos data-aos-delay="100">
+      <!-- Meal Order -->
+      <div class="glass-static rounded-2xl overflow-hidden">
+        <button class="accordion-trigger w-full px-7 py-5 flex items-center justify-between text-left hover:bg-slate-800/30 transition-colors duration-200">
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 rounded-xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center text-orange-400 flex-shrink-0"><i class="fas fa-utensils"></i></div>
+            <div>
+              <h3 class="text-white font-bold">Meal Order Management System</h3>
+              <p class="text-slate-500 text-sm">C++ · OOP · File I/O</p>
+            </div>
+          </div>
+          <i class="fas fa-chevron-down accordion-icon text-slate-500 flex-shrink-0"></i>
+        </button>
+        <div class="accordion-content">
+          <div class="px-7 pb-6 border-t border-slate-800/50">
+            <p class="text-slate-400 text-sm leading-relaxed mt-5 mb-4">A console-based restaurant ordering system built in C++ demonstrating object-oriented design patterns, file-based data persistence, and menu-driven user interfaces.</p>
+            <div class="flex flex-wrap gap-2 mb-4"><span class="tech-tag">C++</span><span class="tech-tag">OOP</span><span class="tech-tag">File I/O</span></div>
+            <a href="https://github.com/NasorHidar" target="_blank" class="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 text-sm font-semibold transition-colors"><i class="fab fa-github"></i>View Repository</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- DSA -->
+      <div class="glass-static rounded-2xl overflow-hidden">
+        <button class="accordion-trigger w-full px-7 py-5 flex items-center justify-between text-left hover:bg-slate-800/30 transition-colors duration-200">
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 flex-shrink-0"><i class="fas fa-project-diagram"></i></div>
+            <div>
+              <h3 class="text-white font-bold">Data Structures &amp; Algorithms Implementations</h3>
+              <p class="text-slate-500 text-sm">Python · Graph Algorithms · BFS · DFS · Dijkstra</p>
+            </div>
+          </div>
+          <i class="fas fa-chevron-down accordion-icon text-slate-500 flex-shrink-0"></i>
+        </button>
+        <div class="accordion-content">
+          <div class="px-7 pb-6 border-t border-slate-800/50">
+            <p class="text-slate-400 text-sm leading-relaxed mt-5 mb-4">A collection of graph traversal and shortest-path algorithm implementations with visualized step-by-step execution. Covers BFS, DFS, and Dijkstra's Algorithm with test case benchmarking.</p>
+            <div class="flex flex-wrap gap-2 mb-5"><span class="tech-tag">Python</span><span class="tech-tag tech-tag-teal">BFS</span><span class="tech-tag tech-tag-teal">DFS</span><span class="tech-tag tech-tag-teal">Dijkstra</span></div>
+            <div class="flex gap-4">
+              <a href="https://github.com/NasorHidar" target="_blank" class="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 text-sm font-semibold transition-colors"><i class="fab fa-github"></i>BFS / DFS Repo</a>
+              <a href="https://github.com/NasorHidar" target="_blank" class="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 text-sm font-semibold transition-colors"><i class="fab fa-github"></i>Dijkstra Repo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-slate-800/60 py-10 px-6">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+    <p class="text-slate-500 text-sm">© 2026 <span class="text-white font-semibold">Nasor Hidar</span>. All rights reserved.</p>
+    <p class="text-slate-600 text-xs">Built with <span class="text-red-400">❤</span> Love.</p>
+    <div class="flex gap-5">
+      <a href="https://github.com/NasorHidar" target="_blank" class="text-slate-600 hover:text-cyan-400 transition-colors"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/nasor-hidar" target="_blank" class="text-slate-600 hover:text-cyan-400 transition-colors"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:nasorhidar@gmail.com" class="text-slate-600 hover:text-cyan-400 transition-colors"><i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script src="nav.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

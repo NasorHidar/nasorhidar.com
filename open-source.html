@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nasor Hidar's open-source contributions — OWASP DefectDojo, Zulip, freeCodeCamp.">
+  <title>Open Source & Security | Nasor Hidar</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#020817] text-slate-50 grid-bg">
+
+<!-- PAGE HERO -->
+<section class="relative pt-36 pb-0 px-6 overflow-hidden">
+  <div class="orb w-[500px] h-[500px] bg-teal-500 opacity-[0.07]" style="top:-15%;right:-8%"></div>
+  <div class="orb w-72 h-72 bg-cyan-500 opacity-[0.06]" style="bottom:0;left:-5%"></div>
+  <div class="max-w-6xl mx-auto relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center min-h-[420px]">
+      <!-- Text -->
+      <div class="pb-16 lg:pb-20">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-teal-500/30 bg-teal-500/5 text-teal-400 text-sm font-medium mb-6" data-aos>
+          <i class="fab fa-github mr-1"></i>Open Source Contributions
+        </div>
+        <h1 class="text-5xl md:text-6xl font-black text-white leading-tight mb-5" data-aos data-aos-delay="100">
+          Open Source<br>&amp; <span class="gradient-text">Security</span>
+        </h1>
+        <p class="text-slate-400 text-lg leading-relaxed max-w-xl" data-aos data-aos-delay="200">
+          Navigating large-scale codebases, submitting production-grade patches, and engaging with global developer communities.
+        </p>
+        <div class="flex flex-wrap gap-3 mt-7" data-aos data-aos-delay="300">
+          <span class="badge badge-teal"><i class="fas fa-code-merge mr-1"></i>PR Merged</span>
+          <span class="badge badge-cyan"><i class="fas fa-robot mr-1"></i>150+ CI Checks</span>
+          <span class="badge badge-indigo"><i class="fas fa-users mr-1"></i>Community Active</span>
+        </div>
+      </div>
+      <!-- Hero Image -->
+      <div class="hidden lg:flex items-end justify-end h-full" data-aos="fade-left" data-aos-delay="200">
+        <div class="relative w-full max-w-lg">
+          <div class="absolute inset-0 rounded-3xl" style="background:radial-gradient(ellipse at center,rgba(6,182,212,0.15) 0%,transparent 70%)"></div>
+          <img src="hero_opensource.png" alt="Open source contribution visualization" class="w-full rounded-3xl relative z-10 drop-shadow-2xl" style="filter:drop-shadow(0 0 40px rgba(6,182,212,0.2))">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Bottom fade -->
+  <div class="absolute bottom-0 left-0 right-0 h-24" style="background:linear-gradient(to bottom,transparent,#020817)"></div>
+</section>
+
+<!-- FEATURED: OWASP DefectDojo -->
+<section class="py-20 px-6">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-12" data-aos>
+      <span class="badge badge-amber mb-3"><i class="fas fa-star mr-1"></i>Featured Contribution</span>
+      <h2 class="text-3xl md:text-4xl font-black text-white mt-3">OWASP <span class="gradient-text">DefectDojo</span></h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="glow-card glow-card-featured p-8 md:p-10" data-aos data-aos-delay="100">
+      <div class="flex flex-col md:flex-row gap-8">
+        <!-- Left -->
+        <div class="flex-1">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-14 h-14 rounded-2xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center text-2xl flex-shrink-0">🛡️</div>
+            <div>
+              <h3 class="text-xl font-bold text-white">django-DefectDojo</h3>
+              <p class="text-slate-400 text-sm">Enterprise Vulnerability Management Platform</p>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="badge badge-amber"><i class="fab fa-python mr-1"></i>Django</span>
+            <span class="badge badge-cyan">REST API</span>
+            <span class="badge badge-green"><i class="fas fa-code-merge mr-1"></i>PR Merged</span>
+          </div>
+
+          <h4 class="text-white font-semibold mb-3">What I Built</h4>
+          <p class="text-slate-400 leading-relaxed mb-5">Enhanced data retrieval capabilities for API consumers by engineering missing <span class="text-cyan-400 font-mono font-semibold">django-filter</span> timestamp logic within the core Django backend — allowing clients to filter resources by exact creation and modification timestamps.</p>
+
+          <ul class="space-y-3 mb-7 text-sm text-slate-400">
+            <li class="flex items-start gap-3"><span class="w-5 h-5 rounded-full bg-teal-500/15 border border-teal-500/30 flex items-center justify-center text-teal-400 text-xs flex-shrink-0 mt-0.5"><i class="fas fa-check"></i></span>Navigated and passed <span class="text-white font-semibold mx-1">150+ CI/CD checks</span> across the test suite</li>
+            <li class="flex items-start gap-3"><span class="w-5 h-5 rounded-full bg-teal-500/15 border border-teal-500/30 flex items-center justify-center text-teal-400 text-xs flex-shrink-0 mt-0.5"><i class="fas fa-check"></i></span>Executed <span class="text-white font-semibold mx-1">upstream syncing &amp; multi-commit rebasing</span> against main</li>
+            <li class="flex items-start gap-3"><span class="w-5 h-5 rounded-full bg-teal-500/15 border border-teal-500/30 flex items-center justify-center text-teal-400 text-xs flex-shrink-0 mt-0.5"><i class="fas fa-check"></i></span>Engaged with maintainers through multiple review cycles to refine the implementation</li>
+          </ul>
+
+          <a href="https://github.com/DefectDojo/django-DefectDojo/pull/14754" target="_blank" id="owasp-pr-link" class="inline-flex items-center gap-2 px-6 py-3 bg-cyan-500/10 hover:bg-cyan-500 border border-cyan-500/30 hover:border-cyan-500 text-cyan-400 hover:text-slate-950 font-semibold rounded-xl transition-all duration-300 text-sm">
+            <i class="fab fa-github"></i> View Pull Request #14754 <i class="fas fa-external-link-alt text-xs"></i>
+          </a>
+        </div>
+
+        <!-- Right: Terminal -->
+        <div class="md:w-96 flex-shrink-0">
+          <div class="terminal">
+            <div class="terminal-header">
+              <span class="terminal-dot" style="background:#ff5f56"></span>
+              <span class="terminal-dot" style="background:#ffbd2e"></span>
+              <span class="terminal-dot" style="background:#27c93f"></span>
+              <span class="text-slate-500 text-xs ml-2">finding.py — filter patch</span>
+            </div>
+            <div class="terminal-body text-xs leading-loose">
+              <span class="cm"># Before: missing timestamp fields</span><br>
+              <span class="kw">class</span> <span class="fn">FindingFilter</span>(FilterSet):<br>
+              &nbsp;&nbsp;<span class="cm"># created_before / after — absent</span><br>
+              &nbsp;&nbsp;<span class="cm"># modified timestamps — absent</span><br>
+              <br>
+              <span class="cm"># After: Nasor's patch PR #14754</span><br>
+              <span class="kw">class</span> <span class="fn">FindingFilter</span>(FilterSet):<br>
+              &nbsp;&nbsp;created = <span class="fn">DateTimeFromToRangeFilter</span>(<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;field_name=<span class="str">'date'</span><br>
+              &nbsp;&nbsp;)<br>
+              &nbsp;&nbsp;created_before = <span class="fn">DateTimeFilter</span>(<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;field_name=<span class="str">'date'</span>,<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;lookup_expr=<span class="str">'lte'</span><br>
+              &nbsp;&nbsp;)<br>
+              &nbsp;&nbsp;created_after = <span class="fn">DateTimeFilter</span>(<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;field_name=<span class="str">'date'</span>,<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;lookup_expr=<span class="str">'gte'</span><br>
+              &nbsp;&nbsp;)<br>
+              <br>
+              <span class="cm"># CI: 150+ checks ✓ | Rebased ✓</span>
+            </div>
+          </div>
+
+          <!-- Stats -->
+          <div class="grid grid-cols-3 gap-3 mt-4">
+            <div class="glass-static p-4 text-center"><p class="stat-number gradient-text text-2xl">150+</p><p class="text-slate-500 text-xs mt-1">CI Checks</p></div>
+            <div class="glass-static p-4 text-center"><p class="stat-number gradient-text text-2xl">3k+</p><p class="text-slate-500 text-xs mt-1">Repo Stars</p></div>
+            <div class="glass-static p-4 text-center"><p class="stat-number gradient-text text-2xl">PR</p><p class="text-slate-500 text-xs mt-1">#14754</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OTHER ENGAGEMENTS -->
+<section class="py-20 px-6" style="background:linear-gradient(to bottom,rgba(6,182,212,.025),transparent)">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-12" data-aos>
+      <span class="badge badge-teal mb-3"><i class="fas fa-users mr-1"></i>Community Engagement</span>
+      <h2 class="text-3xl md:text-4xl font-black text-white mt-3">Other <span class="gradient-text">Engagements</span></h2>
+      <div class="section-divider"></div>
+      <p class="text-slate-400 mt-5 max-w-xl mx-auto">Active participation in top-tier open-source communities demonstrates breadth of codebase navigation skills.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Zulip -->
+      <div class="glow-card p-7" data-aos data-aos-delay="100">
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-2xl flex-shrink-0">💬</div>
+          <div>
+            <h3 class="text-lg font-bold text-white">Zulip</h3>
+            <p class="text-slate-500 text-sm">Open-source team chat platform</p>
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-2 mb-4"><span class="badge badge-indigo">Fork</span><span class="tech-tag">Python</span><span class="tech-tag">Django</span></div>
+        <p class="text-slate-400 text-sm leading-relaxed">Forked and explored Zulip's enterprise chat infrastructure — analyzing their Django backend patterns, WebSocket event system, and multi-realm architecture as part of studying large-scale real-time communication systems.</p>
+        <a href="https://github.com/NasorHidar" target="_blank" class="mt-5 inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 text-sm font-semibold transition-colors">View on GitHub <i class="fas fa-arrow-right text-xs"></i></a>
+      </div>
+
+      <!-- freeCodeCamp -->
+      <div class="glow-card p-7" data-aos data-aos-delay="200">
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-12 h-12 rounded-xl bg-green-500/10 border border-green-500/20 flex items-center justify-center text-2xl flex-shrink-0">🏕️</div>
+          <div>
+            <h3 class="text-lg font-bold text-white">freeCodeCamp</h3>
+            <p class="text-slate-500 text-sm">Global open-source learning platform</p>
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-2 mb-4"><span class="badge badge-green">Review</span><span class="tech-tag">Node.js</span><span class="tech-tag">MongoDB</span></div>
+        <p class="text-slate-400 text-sm leading-relaxed">Reviewed freeCodeCamp's MERN-stack codebase — studying their challenge submission API, race condition handling patterns, and concurrent user session management at scale. Applied learnings directly to ChatNest's WebSocket concurrency model.</p>
+        <a href="https://github.com/NasorHidar" target="_blank" class="mt-5 inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 text-sm font-semibold transition-colors">View on GitHub <i class="fas fa-arrow-right text-xs"></i></a>
+      </div>
+    </div>
+
+    <!-- Philosophy card -->
+    <div class="glass-static p-8 mt-10 text-center" data-aos data-aos-delay="300">
+      <i class="fas fa-quote-left text-cyan-400/30 text-4xl mb-4 block"></i>
+      <p class="text-xl text-slate-300 font-medium italic max-w-2xl mx-auto leading-relaxed">"The best way to understand how enterprise systems are built is to read their code, contribute fixes, and ship those changes through a rigorous CI pipeline."</p>
+      <p class="text-slate-500 text-sm mt-4">— Nasor Hidar</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-slate-800/60 py-10 px-6">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+    <p class="text-slate-500 text-sm">© 2026 <span class="text-white font-semibold">Nasor Hidar</span>. All rights reserved.</p>
+    <p class="text-slate-600 text-xs">Built with <span class="text-red-400">❤</span> Love.</p>
+    <div class="flex gap-5">
+      <a href="https://github.com/NasorHidar" target="_blank" class="text-slate-600 hover:text-cyan-400 transition-colors"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/nasor-hidar" target="_blank" class="text-slate-600 hover:text-cyan-400 transition-colors"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:nasorhidar@gmail.com" class="text-slate-600 hover:text-cyan-400 transition-colors"><i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script src="nav.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
