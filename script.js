@@ -92,10 +92,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const typedEl = document.getElementById('typed-text');
   if (typedEl) {
     const phrases = [
-      'Building scalable Django & MERN applications.',
-      'Engineering secure, RBAC-driven systems.',
-      'Contributing to enterprise open-source.',
-      'Solving algorithmic challenges on Codeforces.'
+      'Automating tests with Selenium & Playwright.',
+      'Building CI/CD pipelines that catch bugs early.',
+      'Contributing to OWASP DefectDojo — enterprise QA.',
+      'Shifting left — quality from day one.'
     ];
     let pi = 0, ci = 0, deleting = false;
     function type() {

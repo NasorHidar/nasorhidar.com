@@ -1,15 +1,15 @@
-# Nasor Hidar | Full-Stack Developer & Secure System Designer
+# Nasor Hidar | QA Engineer & Test Automation Specialist
 
 <div align="center">
-  <img alt="Multi-Page" src="https://img.shields.io/badge/Architecture-Multi--Page-06b6d4?style=for-the-badge"/>
+  <img alt="Multi-Page" src="https://img.shields.io/badge/Architecture-Multi--Page-10b981?style=for-the-badge"/>
   <img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind_CSS-v3-0ea5e9?style=for-the-badge&logo=tailwindcss&logoColor=white"/>
   <img alt="Responsive" src="https://img.shields.io/badge/Responsive-All_Devices-2dd4bf?style=for-the-badge"/>
-  <img alt="Performance" src="https://img.shields.io/badge/Design-Dark_Glassmorphism-818cf8?style=for-the-badge"/>
+  <img alt="Design" src="https://img.shields.io/badge/Design-Dark_Glassmorphism-34d399?style=for-the-badge"/>
 </div>
 
 <br/>
 
-A premium, **multi-page personal portfolio** showcasing expertise in **Full-Stack Development**, **Secure System Design**, and **Competitive Programming**. Built with a dark-first **slate/navy + teal/cyan** cybersecurity aesthetic, smooth scroll animations, and shared component architecture.
+A premium, **multi-page personal portfolio** showcasing expertise in **Software Quality Assurance**, **Test Automation**, and **Security-focused QA**. Built with a dark-first **slate/navy + emerald/green** aesthetic — the QA "pass" palette — with smooth scroll animations and a shared component architecture.
 
 🌍 **Live Portfolio:** [nasorhidar.com](https://nasorhidar.com)
 
@@ -17,23 +17,23 @@ A premium, **multi-page personal portfolio** showcasing expertise in **Full-Stac
 
 ## 📸 Design Highlights
 
-- **Theme:** Deep `slate-950` base with `cyan-400` / `teal-400` accent gradient — reflects a cybersecurity/developer aesthetic
+- **Theme:** Deep `slate-950` base with `emerald-400` / `teal-400` accent gradient — reflects a QA/testing mindset ("green = passing")
+- **Amber accents:** Used for bug/defect indicators — contextually meaningful color language
 - **Typography:** Inter (headings & body) + Roboto Mono (stats, code blocks, tech tags)
-- **Glassmorphism:** Backdrop-blur cards with hover lift, glow borders on featured content
+- **Glassmorphism:** Backdrop-blur cards with hover lift, emerald glow borders on featured content
 - **Animations:** Custom AOS (Animate on Scroll) via IntersectionObserver with staggered delays
-- **Hero:** Typing effect cycling through 4 phrases, social links, animated CTA buttons
-- **CP Dashboard:** Live-fill animated rating bars for Codeforces & CodeChef
-- **Terminal Block:** Syntax-highlighted code block showcasing the OWASP DefectDojo PR patch
+- **Hero:** QA-focused typing effect cycling through 4 phrases, animated emerald orbs
+- **QA Metrics Strip:** Visual stat cards below the hero — test coverage, bug detection approach, CI/CD, OWASP
 
 ---
 
 ## 🚀 Key Features
 
-- **4-Page Architecture:** Home, Open Source, Projects, Achievements — each with a unique illustrated hero section
-- **Shared Navbar (`nav.js`):** Single source of truth injected into all pages — handles active link, scroll shrink, and hamburger mobile menu
+- **4-Page Architecture:** Home, Open Source, Projects, Achievements — each with a unique illustrated hero
+- **Shared Navbar (`nav.js`):** Single source of truth injected into all pages — handles active link (emerald), scroll shrink, hamburger mobile menu
 - **Hire Me CTA:** Smart routing — smooth-scrolls to `#contact` on home page, navigates to `index.html#contact` from sub-pages
 - **Real-time Contact Form:** Formspree API integration with loading/success/error states
-- **Collapsible Accordion:** Academic mini-projects section with smooth CSS transitions
+- **QA Metrics Strip:** 4-column stat grid highlighting testing philosophy and tool ecosystem
 - **No Build Step:** Tailwind CSS loaded via CDN — open any `.html` directly in a browser
 
 ---
@@ -41,17 +41,18 @@ A premium, **multi-page personal portfolio** showcasing expertise in **Full-Stac
 ## 📂 Project Structure
 
 ```text
-├── index.html              # Home — Hero, Skills Grid, About/Education, Contact Form
+├── index.html              # Home — Hero, QA Metrics, Skills Grid, About/Education, Contact Form
 ├── open-source.html        # Open Source — OWASP DefectDojo PR, terminal patch view, community engagement
 ├── projects.html           # Projects — SkillCurrency, ChatNest, Queue System + Academic accordion
 ├── achievements.html       # Achievements — CP Dashboard, Contest Timeline, Certifications
 │
-├── nav.js                  # Shared navbar injection (active state, scroll shrink, hamburger)
-├── script.js               # AOS observer, typing effect, accordion, Formspree form handler
-├── styles.css              # Design system — glassmorphism, AOS, terminal, rating bars, badges
+├── nav.js                  # Shared navbar injection (active state emerald, scroll shrink, hamburger)
+├── script.js               # AOS observer, typing effect (QA phrases), accordion, Formspree handler
+├── styles.css              # Design system — emerald palette, glassmorphism, qa-metric-card, badges
 ├── Nasor Hidar's Resume.pdf # Downloadable CV — linked from hero "Read Resume" button
 │
-├── cyber_hero_bg.png       # Hero background — circuit board abstract
+├── qa_hero_bg.png          # Hero background — QA test pipeline abstract
+├── cyber_hero_bg.png       # Legacy hero background
 ├── chatnest_preview_*.png  # ChatNest project preview image
 ├── hero_opensource.png     # Open Source page hero illustration
 ├── hero_projects.png       # Projects page hero illustration
@@ -73,24 +74,31 @@ A premium, **multi-page personal portfolio** showcasing expertise in **Full-Stac
 
 ---
 
-## 💻 Featured Work
+## 🧪 QA Skills Showcased
 
-| Project | Stack | Highlights |
-|---|---|---|
-| **SkillCurrency** | Django, PostgreSQL, RBAC | 3-tier role access, escrow transaction module |
-| **ChatNest** | MERN, JWT, AES-256, WebSockets | 100+ concurrent connections, encrypted routing |
-| **Queue System** | Python, Tkinter | Real-time Gantt charts, CPU scheduling algorithms |
+| Area | Tools & Methods |
+|---|---|
+| **Test Types** | Unit · Integration · E2E · Regression · Smoke · VAPT |
+| **Automation** | Selenium · PyTest · Jest · Playwright · Cypress |
+| **CI/CD** | GitHub Actions · Docker · Jenkins · GitLab CI |
+| **Bug Tracking** | OWASP DefectDojo · Jira · TestRail · GitHub Issues |
+| **Security QA** | OWASP Top 10 · Pen Testing · AES-256 · RBAC |
 
 ---
 
-## 🏆 Competitive Programming
+## 💻 Featured Work
 
-| Platform | Handle | Rating | Solved |
-|---|---|---|---|
-| Codeforces | [Undefined_Code](https://codeforces.com/profile/Undefined_Code) | 1254 | 500+ |
-| CodeChef | [undefined_code](https://www.codechef.com/users/undefined_code) | 1244 | 50+ |
+| Project | Stack | QA Highlights |
+|---|---|---|
+| **SkillCurrency** | Django, PostgreSQL, RBAC | Integration tests, role-based access validation |
+| **ChatNest** | MERN, JWT, AES-256, WebSockets | Concurrency testing, encrypted routing verification |
+| **Queue System** | Python, Tkinter | Algorithm correctness testing, Gantt chart validation |
 
-**Contests:** ICPC Asia Dhaka Regional (2023, 2025) · IEEE Xtreme 19.0
+---
+
+## 🏆 Open Source
+
+**OWASP DefectDojo** — Enterprise vulnerability management platform. Contributed patches to defect tracking workflows, integrating security findings into automated QA pipelines.
 
 ---
 
