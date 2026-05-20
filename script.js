@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('aos-animate');
-        // Trigger rating fills
+        // Trigger rating fills nested inside the observed element
         entry.target.querySelectorAll('.rating-fill[data-width]').forEach(fill => {
           fill.style.width = fill.dataset.width;
         });
@@ -40,8 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.accordion-trigger').forEach(trigger => {
     trigger.addEventListener('click', () => {
       const content = trigger.nextElementSibling;
-      const icon = trigger.querySelector('.accordion-icon');
-      const isOpen = content.classList.contains('open');
+      const icon    = trigger.querySelector('.accordion-icon');
+      const isOpen  = content.classList.contains('open');
       document.querySelectorAll('.accordion-content.open').forEach(c => {
         c.classList.remove('open');
         c.previousElementSibling.querySelector('.accordion-icon').style.transform = '';
@@ -58,44 +58,44 @@ document.addEventListener('DOMContentLoaded', () => {
   if (form) {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const btn = form.querySelector('#submit-btn');
+      const btn    = form.querySelector('#submit-btn');
       const status = document.getElementById('form-status');
       btn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending…';
-      btn.disabled = true;
+      btn.disabled  = true;
       try {
         const res = await fetch(form.action, {
           method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' }
         });
         if (res.ok) {
           btn.innerHTML = '<i class="fas fa-check mr-2"></i>Sent!';
-          btn.classList.add('!bg-teal-500');
-          status.textContent = "Message received! I'll reply within 24 hours.";
-          status.className = 'text-teal-400 text-sm mt-3 text-center block';
+          btn.style.background = 'linear-gradient(135deg,#22d3ee,#06b6d4)';
+          status.textContent   = "Message received! I'll reply within 24 hours.";
+          status.className     = 'text-cyan-400 text-sm mt-3 text-center block';
           form.reset();
         } else throw new Error();
       } catch {
         btn.innerHTML = '<i class="fas fa-times mr-2"></i>Failed';
-        btn.classList.add('!bg-red-500');
-        status.textContent = 'Something went wrong — email me at nasorhidar@gmail.com';
-        status.className = 'text-red-400 text-sm mt-3 text-center block';
+        btn.style.background = 'rgba(239,68,68,0.8)';
+        status.textContent   = 'Something went wrong — email me at nasorhidar@gmail.com';
+        status.className     = 'text-red-400 text-sm mt-3 text-center block';
       } finally {
         setTimeout(() => {
           btn.innerHTML = 'Send Message <i class="fas fa-paper-plane ml-2"></i>';
-          btn.disabled = false;
-          btn.classList.remove('!bg-teal-500','!bg-red-500');
+          btn.disabled  = false;
+          btn.style.background = '';
         }, 4000);
       }
     });
   }
 
-  // ── Typing effect (hero subtitle) ───────────────────
+  // ── Typing effect — Developer-focused phrases ────────
   const typedEl = document.getElementById('typed-text');
   if (typedEl) {
     const phrases = [
-      'Automating tests with Selenium & Playwright.',
-      'Building CI/CD pipelines that catch bugs early.',
-      'Contributing to OWASP DefectDojo — enterprise QA.',
-      'Shifting left — quality from day one.'
+      'Building Scalable Web Apps.',
+      '500+ CP Problems Solved.',
+      'Django & MERN Stack Expert.',
+      'Open Source Contributor.',
     ];
     let pi = 0, ci = 0, deleting = false;
     function type() {
