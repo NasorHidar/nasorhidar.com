@@ -1,360 +1,624 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Nasor Hidar — Software Engineer & Full-Stack Developer specialising in Django, MERN Stack, and Competitive Programming. B.Sc. ICT at Jahangirnagar University.">
-  <title>Nasor Hidar | Software Engineer & Full-Stack Developer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nasor Hidar — Full-Stack Software Engineer, Machine Learning & Usable Cybersecurity. B.Sc. ICT at Jahangirnagar University. Contributor to OWASP DefectDojo.">
+  <title>Nasor Hidar | Full-Stack Software Engineer · AI & Cybersecurity</title>
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="Nasor Hidar | Full-Stack Software Engineer">
+  <meta property="og:description" content="Interactive 3D portfolio of Nasor Hidar — Software Engineer specializing in scalable systems, AI/ML, and usable cybersecurity.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nasorhidar.com">
+  <meta property="og:image" content="./preview.png">
+
+  <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
+  <!-- CDNs: Tailwind, FontAwesome -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Importmap for Three.js ES Module -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+      }
+    }
+  </script>
 </head>
-<body class="bg-[#020817] text-slate-50 grid-bg">
+<body data-scene="home" class="bg-[#06070d] text-slate-100 selection:bg-cyan-500 selection:text-slate-950">
 
-<!-- HERO ──────────────────────────────────────────── -->
-<section class="relative min-h-screen flex items-center justify-center overflow-hidden">
-  <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('cyber_hero_bg.png')"></div>
-  <div class="absolute inset-0" style="background:linear-gradient(to bottom,rgba(2,8,23,.82) 0%,rgba(2,8,23,.65) 50%,#020817 100%)"></div>
+  <!-- 3D WebGL Background Canvas -->
+  <canvas id="webgl-canvas"></canvas>
 
-  <!-- Ambient orbs -->
-  <div class="orb w-[520px] h-[520px] bg-indigo-600 opacity-[0.09]"  style="top:-14%;left:-12%"></div>
-  <div class="orb w-80   h-80   bg-cyan-400  opacity-[0.07]"  style="bottom:6%;right:-8%"></div>
-  <div class="orb w-64   h-64   bg-violet-600 opacity-[0.06]" style="top:28%;right:4%"></div>
+  <!-- Subtle Cyber Spatial Grid -->
+  <div class="cyber-grid-overlay"></div>
 
-  <div class="relative z-10 max-w-4xl mx-auto px-6 text-center pt-28 pb-20">
-
-    <!-- Status badge -->
-    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-indigo-500/30 bg-indigo-500/5 text-indigo-300 text-sm font-medium mb-8" data-aos>
-      <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>Open to Full-Stack &amp; SWE Internships &amp; Roles
-    </div>
-
-    <!-- Heading -->
-    <h1 class="hero-title text-6xl md:text-7xl font-black tracking-tight text-white leading-tight mb-5" data-aos data-aos-delay="100">
-      Nasor Hidar<br>
-      <span class="gradient-text">Software Engineer</span>
-      <span class="text-slate-400 text-4xl md:text-5xl"> &amp; Full-Stack Developer</span>
-    </h1>
-
-    <!-- Typing effect -->
-    <div class="flex items-center justify-center gap-2 text-base md:text-lg text-slate-400 mb-6 min-h-8" data-aos data-aos-delay="200">
-      <span class="font-mono text-cyan-400">&gt;_</span>
-      <span id="typed-text" class="font-mono text-slate-300"></span>
-      <span class="w-0.5 h-5 bg-cyan-400 animate-pulse"></span>
-    </div>
-
-    <!-- Tagline -->
-    <p class="text-slate-400 text-base md:text-lg mb-10 max-w-2xl mx-auto leading-relaxed" data-aos data-aos-delay="250">
-      B.Sc. in ICT at <span class="text-white font-semibold">Jahangirnagar University</span>.
-      Architecting performant web applications and cracking complex algorithmic problems.
-    </p>
-
-    <!-- CTAs -->
-    <div class="flex flex-wrap justify-center gap-4 mb-12" data-aos data-aos-delay="300">
-      <a href="projects.html" id="cta-projects" class="btn-primary">
-        View Projects <i class="fas fa-arrow-right"></i>
-      </a>
-      <a href="Nasor_Hidar's_Resume.pdf" target="_blank" rel="noopener" id="cta-resume" class="btn-secondary">
-        <i class="fas fa-file-alt" style="color:#22d3ee"></i> View Resume
-      </a>
-    </div>
-
-    <!-- Social links -->
-    <div class="flex items-center justify-center gap-4" data-aos data-aos-delay="350">
-      <a href="https://github.com/NasorHidar" target="_blank" id="s-gh" aria-label="GitHub"
-         class="w-11 h-11 flex items-center justify-center rounded-xl bg-slate-800/60 border border-slate-700 hover:border-indigo-500/60 hover:text-indigo-400 text-slate-300 transition-all duration-300 hover:-translate-y-1">
-        <i class="fab fa-github text-lg"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/nasor-hidar" target="_blank" id="s-li" aria-label="LinkedIn"
-         class="w-11 h-11 flex items-center justify-center rounded-xl bg-slate-800/60 border border-slate-700 hover:border-cyan-500/60 hover:text-cyan-400 text-slate-300 transition-all duration-300 hover:-translate-y-1">
-        <i class="fab fa-linkedin text-lg"></i>
-      </a>
-      <a href="mailto:nasorhidar@gmail.com" id="s-em" aria-label="Email"
-         class="w-11 h-11 flex items-center justify-center rounded-xl bg-slate-800/60 border border-slate-700 hover:border-indigo-500/60 hover:text-indigo-400 text-slate-300 transition-all duration-300 hover:-translate-y-1">
-        <i class="fas fa-envelope text-lg"></i>
-      </a>
-    </div>
-
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-slate-600 text-xs animate-bounce">
-      <i class="fas fa-chevron-down"></i>
-    </div>
-  </div>
-</section>
-
-<!-- ENGINEERING METRICS STRIP ────────────────────── -->
-<section class="py-16 px-6" style="background:linear-gradient(to bottom,rgba(99,102,241,0.05),transparent)">
-  <div class="max-w-6xl mx-auto">
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-5" data-aos>
-
-      <!-- CP Solves -->
-      <div class="eng-metric-card p-6 text-center">
-        <div class="qa-metric-icon bg-indigo-500/10 border-indigo-500/20 text-indigo-400 mx-auto mb-4">
-          <i class="fas fa-code text-xl"></i>
+  <!-- HERO SECTION ────────────────────────────────────────────────────────── -->
+  <section class="relative min-h-screen flex items-center justify-center pt-28 pb-20 px-6 overflow-hidden z-10">
+    <div class="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Left Column: Kinetic Hero Text & Actions -->
+      <div class="lg:col-span-7 flex flex-col items-start text-left">
+        
+        <!-- Live Status Pill -->
+        <div class="hero-animate inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-indigo-500/30 bg-indigo-950/40 backdrop-blur-md text-indigo-300 text-xs font-mono font-medium mb-6">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+          <span class="text-emerald-400 font-semibold">Available</span>
+          <span class="text-slate-500">|</span>
+          <span>SWE &amp; Full-Stack Roles</span>
         </div>
-        <p class="stat-number text-3xl gradient-text mb-1">500+</p>
-        <p class="text-slate-400 text-xs uppercase tracking-widest font-semibold">CP Problems</p>
-        <p class="text-slate-600 text-xs mt-1">Python · C++ · Java</p>
+
+        <!-- Main Display Name & Title -->
+        <h1 class="hero-animate font-display text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.08] mb-4">
+          Nasor Hidar<br>
+          <span class="gradient-text">Full-Stack Engineer</span>
+        </h1>
+
+        <!-- Typing Terminal Subtitle -->
+        <div class="hero-animate flex items-center gap-2.5 text-base sm:text-lg text-slate-300 mb-6 font-mono min-h-[32px]">
+          <span class="text-cyan-400 font-bold">&gt;_</span>
+          <span id="typed-text" class="text-slate-200"></span>
+          <span class="w-2 h-5 bg-cyan-400 animate-pulse"></span>
+        </div>
+
+        <!-- Bio Pitch -->
+        <p class="hero-animate text-slate-400 text-base sm:text-lg leading-relaxed max-w-xl mb-8">
+          B.Sc. in ICT at <span class="text-white font-semibold">Jahangirnagar University</span>. 
+          Architecting resilient distributed systems, production AI pipelines, and usable cryptographic web applications from <span class="text-cyan-300 font-medium">Savar, Dhaka</span>.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="hero-animate flex flex-wrap items-center gap-4 mb-10">
+          <a href="projects.html" class="btn-magnetic-primary">
+            <span>Explore Projects</span>
+            <i class="fas fa-arrow-right text-xs"></i>
+          </a>
+          <a href="Nasor_Hidar_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-magnetic-secondary">
+            <i class="fas fa-file-pdf text-cyan-400"></i>
+            <span>Download CV</span>
+          </a>
+          <a href="#contact" class="px-5 py-3 rounded-xl border border-white/10 hover:border-white/30 text-slate-300 hover:text-white text-sm font-semibold transition-all">
+            Get In Touch
+          </a>
+        </div>
+
+        <!-- Social Channels & Competitive Handles -->
+        <div class="hero-animate flex flex-wrap items-center gap-3">
+          <a href="https://github.com/NasorHidar" target="_blank" rel="noopener noreferrer" class="w-11 h-11 rounded-xl bg-slate-900/70 border border-white/10 hover:border-cyan-400 hover:text-cyan-400 flex items-center justify-center text-slate-300 text-lg transition-all duration-300 hover:-translate-y-1" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/nasor-hidar" target="_blank" rel="noopener noreferrer" class="w-11 h-11 rounded-xl bg-slate-900/70 border border-white/10 hover:border-indigo-400 hover:text-indigo-400 flex items-center justify-center text-slate-300 text-lg transition-all duration-300 hover:-translate-y-1" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://codeforces.com/profile/Undefined_Code" target="_blank" rel="noopener noreferrer" class="w-11 h-11 rounded-xl bg-slate-900/70 border border-white/10 hover:border-amber-400 hover:text-amber-400 flex items-center justify-center text-slate-300 text-sm font-mono font-bold transition-all duration-300 hover:-translate-y-1" title="Codeforces: Undefined_Code">
+            CF
+          </a>
+          <a href="https://www.codechef.com/users/undefined_code" target="_blank" rel="noopener noreferrer" class="w-11 h-11 rounded-xl bg-slate-900/70 border border-white/10 hover:border-amber-400 hover:text-amber-400 flex items-center justify-center text-slate-300 text-sm font-mono font-bold transition-all duration-300 hover:-translate-y-1" title="CodeChef: undefined_code">
+            CC
+          </a>
+          <a href="mailto:nasorhidar@gmail.com" class="w-11 h-11 rounded-xl bg-slate-900/70 border border-white/10 hover:border-cyan-400 hover:text-cyan-400 flex items-center justify-center text-slate-300 text-lg transition-all duration-300 hover:-translate-y-1" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+
       </div>
 
-      <!-- Languages -->
-      <div class="eng-metric-card p-6 text-center">
-        <div class="qa-metric-icon mx-auto mb-4" style="background:rgba(34,211,238,0.1);border-color:rgba(34,211,238,0.2);color:#22d3ee">
-          <i class="fas fa-terminal text-xl"></i>
-        </div>
-        <p class="stat-number text-3xl mb-1" style="color:#22d3ee">8+</p>
-        <p class="text-slate-400 text-xs uppercase tracking-widest font-semibold">Languages</p>
-        <p class="text-slate-600 text-xs mt-1">Py · JS · C · C++ · Java</p>
-      </div>
-
-      <!-- Frameworks -->
-      <div class="eng-metric-card p-6 text-center">
-        <div class="qa-metric-icon mx-auto mb-4" style="background:rgba(168,85,247,0.1);border-color:rgba(168,85,247,0.2);color:#c084fc">
-          <i class="fas fa-layer-group text-xl"></i>
-        </div>
-        <p class="stat-number text-3xl mb-1" style="color:#c084fc">MERN</p>
-        <p class="text-slate-400 text-xs uppercase tracking-widest font-semibold">+ Django Stack</p>
-        <p class="text-slate-600 text-xs mt-1">React · Node · Express</p>
-      </div>
-
-      <!-- Community Leadership -->
-      <div class="eng-metric-card p-6 text-center">
-        <div class="qa-metric-icon mx-auto mb-4" style="background:rgba(251,191,36,0.1);border-color:rgba(251,191,36,0.2);color:#fbbf24">
-          <i class="fas fa-users text-xl"></i>
-        </div>
-        <p class="stat-number text-3xl text-amber-400 mb-1">IEEE</p>
-        <p class="text-slate-400 text-xs uppercase tracking-widest font-semibold">Community Leader</p>
-        <p class="text-slate-600 text-xs mt-1">Treasurer · UNDP Vol.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- SKILLS ────────────────────────────────────────── -->
-<section id="skills" class="py-28 px-6">
-  <div class="max-w-6xl mx-auto">
-    <div class="text-center mb-16" data-aos>
-      <span class="badge badge-indigo mb-4"><i class="fas fa-cubes mr-1"></i>Tech Stack</span>
-      <h2 class="text-4xl md:text-5xl font-black text-white mt-3">Skills &amp; <span class="gradient-text">Frameworks</span></h2>
-      <div class="section-divider"></div>
-      <p class="text-slate-400 mt-5 max-w-xl mx-auto">Languages, frameworks, and tools I use to ship production-grade software.</p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-
-      <!-- Languages -->
-      <div class="glass p-6" data-aos data-aos-delay="100">
-        <div class="flex items-center gap-3 mb-5">
-          <div class="skill-icon-box"><i class="fas fa-code"></i></div>
-          <h3 class="font-bold text-white">Languages</h3>
-        </div>
-        <div class="flex flex-wrap gap-2">
-          <span class="tech-tag">Python</span>
-          <span class="tech-tag">JavaScript</span>
-          <span class="tech-tag">C++</span>
-          <span class="tech-tag">Java</span>
-          <span class="tech-tag">SQL</span>
-          <span class="tech-tag">HTML/CSS</span>
-        </div>
-      </div>
-
-      <!-- Frameworks & Libraries -->
-      <div class="glass p-6" data-aos data-aos-delay="200">
-        <div class="flex items-center gap-3 mb-5">
-          <div class="skill-icon-box" style="background:rgba(34,211,238,0.1);border-color:rgba(34,211,238,0.2);color:#22d3ee"><i class="fas fa-layer-group"></i></div>
-          <h3 class="font-bold text-white">Frameworks</h3>
-        </div>
-        <div class="flex flex-wrap gap-2">
-          <span class="tech-tag tech-tag-cyan">Django</span>
-          <span class="tech-tag tech-tag-cyan">React.js</span>
-          <span class="tech-tag tech-tag-cyan">Node.js</span>
-          <span class="tech-tag tech-tag-cyan">Express.js</span>
-          <span class="tech-tag tech-tag-cyan">NumPy</span>
-        </div>
-      </div>
-
-      <!-- Databases & Storage -->
-      <div class="glass p-6" data-aos data-aos-delay="300">
-        <div class="flex items-center gap-3 mb-5">
-          <div class="skill-icon-box" style="background:rgba(129,140,248,0.1);border-color:rgba(129,140,248,0.2);color:#818cf8"><i class="fas fa-database"></i></div>
-          <h3 class="font-bold text-white">Databases</h3>
-        </div>
-        <div class="flex flex-wrap gap-2">
-          <span class="tech-tag tech-tag-purple">PostgreSQL</span>
-          <span class="tech-tag tech-tag-purple">MongoDB</span>
-          <span class="tech-tag tech-tag-purple">SQLite</span>
-          <span class="tech-tag tech-tag-purple">REST APIs</span>
-        </div>
-      </div>
-
-      <!-- Tools & DevOps -->
-      <div class="glass p-6" data-aos data-aos-delay="400">
-        <div class="flex items-center gap-3 mb-5">
-          <div class="skill-icon-box" style="background:rgba(245,158,11,0.1);border-color:rgba(245,158,11,0.2);color:#f59e0b"><i class="fas fa-gears"></i></div>
-          <h3 class="font-bold text-white">Tools &amp; DevOps</h3>
-        </div>
-        <div class="flex flex-wrap gap-2">
-          <span class="tech-tag tech-tag-amber">Git</span>
-          <span class="tech-tag tech-tag-amber">GitHub Actions</span>
-          <span class="tech-tag tech-tag-amber">Linux</span>
-          <span class="tech-tag tech-tag-amber">Docker</span>
+      <!-- Right Column: Spatial Space for the 3D Neural-Security WebGL Core -->
+      <div class="lg:col-span-5 h-[340px] sm:h-[420px] lg:h-[500px] flex items-center justify-center relative pointer-events-none">
+        <div class="text-center font-mono text-xs text-indigo-300/40 border border-indigo-500/20 px-3 py-1.5 rounded-full backdrop-blur-sm self-end mb-4">
+          <i class="fas fa-shield-halved text-cyan-400 mr-1.5"></i>Live 3D Neural-Security Core &middot; Parallax Active
         </div>
       </div>
 
     </div>
+  </section>
 
-    <!-- Secondary row: Security & CP -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-      <div class="glass p-6" data-aos data-aos-delay="100">
-        <div class="flex items-center gap-3 mb-5">
-          <div class="skill-icon-box" style="background:rgba(34,211,238,0.1);border-color:rgba(34,211,238,0.2);color:#22d3ee"><i class="fas fa-shield-halved"></i></div>
-          <h3 class="font-bold text-white">Security &amp; Architecture</h3>
+  <!-- TELEMETRY & ENGINEERING METRICS STRIP ──────────────────────────────── -->
+  <section class="py-14 px-6 relative z-10 border-y border-white/5 bg-slate-950/40 backdrop-blur-xl">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- Stat 1: CP Solves -->
+        <div class="tilt-card p-6 text-center">
+          <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center text-xl mx-auto mb-3 translate-z-sm">
+            <i class="fas fa-code"></i>
+          </div>
+          <p class="font-mono text-3xl sm:text-4xl font-extrabold text-white mb-1 translate-z-md" data-counter="500" data-suffix="+">500+</p>
+          <p class="text-xs uppercase tracking-widest text-slate-400 font-semibold mb-1">CP Problems Solved</p>
+          <p class="text-[11px] font-mono text-cyan-400">CF 1254 &middot; CodeChef 1244</p>
         </div>
-        <div class="flex flex-wrap gap-2">
-          <span class="tech-tag tech-tag-cyan">RBAC</span>
-          <span class="tech-tag tech-tag-cyan">AES-256</span>
-          <span class="tech-tag tech-tag-cyan">OWASP</span>
-          <span class="tech-tag tech-tag-cyan">RESTful APIs</span>
-          <span class="tech-tag tech-tag-cyan">Socket.IO</span>
+
+        <!-- Stat 2: Pipeline Speedup -->
+        <div class="tilt-card p-6 text-center">
+          <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center text-xl mx-auto mb-3 translate-z-sm">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <p class="font-mono text-3xl sm:text-4xl font-extrabold text-cyan-400 mb-1 translate-z-md" data-counter="40" data-suffix="%">40%</p>
+          <p class="text-xs uppercase tracking-widest text-slate-400 font-semibold mb-1">Data Pipeline Speedup</p>
+          <p class="text-[11px] font-mono text-slate-400">FlyRank AI ML Engineering</p>
         </div>
-      </div>
-      <div class="glass p-6" data-aos data-aos-delay="200">
-        <div class="flex items-center gap-3 mb-5">
-          <div class="skill-icon-box" style="background:rgba(168,85,247,0.1);border-color:rgba(168,85,247,0.2);color:#c084fc"><i class="fas fa-trophy"></i></div>
-          <h3 class="font-bold text-white">Competitive Programming</h3>
+
+        <!-- Stat 3: 150+ CI/CD Checks -->
+        <div class="tilt-card p-6 text-center">
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl mx-auto mb-3 translate-z-sm">
+            <i class="fas fa-code-merge"></i>
+          </div>
+          <p class="font-mono text-3xl sm:text-4xl font-extrabold text-emerald-400 mb-1 translate-z-md" data-counter="150" data-suffix="+">150+</p>
+          <p class="text-xs uppercase tracking-widest text-slate-400 font-semibold mb-1">CI/CD Checks Passed</p>
+          <p class="text-[11px] font-mono text-slate-400">OWASP DefectDojo PR #14754</p>
         </div>
-        <div class="flex flex-wrap gap-2">
-          <span class="tech-tag" style="border-color:rgba(192,132,252,.25);color:#c084fc;background:rgba(168,85,247,.08)">Codeforces</span>
-          <span class="tech-tag" style="border-color:rgba(192,132,252,.25);color:#c084fc;background:rgba(168,85,247,.08)">CodeChef</span>
-          <span class="tech-tag" style="border-color:rgba(192,132,252,.25);color:#c084fc;background:rgba(168,85,247,.08)">ICPC</span>
-          <span class="tech-tag" style="border-color:rgba(192,132,252,.25);color:#c084fc;background:rgba(168,85,247,.08)">500+ Solves</span>
-          <span class="tech-tag" style="border-color:rgba(192,132,252,.25);color:#c084fc;background:rgba(168,85,247,.08)">DSA</span>
+
+        <!-- Stat 4: WebSocket Concurrency -->
+        <div class="tilt-card p-6 text-center">
+          <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center text-xl mx-auto mb-3 translate-z-sm">
+            <i class="fas fa-network-wired"></i>
+          </div>
+          <p class="font-mono text-3xl sm:text-4xl font-extrabold text-purple-300 mb-1 translate-z-md" data-counter="100" data-suffix="+">100+</p>
+          <p class="text-xs uppercase tracking-widest text-slate-400 font-semibold mb-1">Socket Concurrency</p>
+          <p class="text-[11px] font-mono text-slate-400">ChatNest AES-256 Encrypted</p>
         </div>
+
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ABOUT ──────────────────────────────────────────── -->
-<section id="about" class="py-24 px-6" style="background:linear-gradient(to bottom,rgba(99,102,241,0.03),transparent)">
-  <div class="max-w-6xl mx-auto">
-    <div class="text-center mb-16" data-aos>
-      <span class="badge badge-cyan mb-4"><i class="fas fa-user mr-1"></i>About Me</span>
-      <h2 class="text-4xl md:text-5xl font-black text-white mt-3">Education &amp; <span class="gradient-text">Background</span></h2>
-      <div class="section-divider"></div>
-    </div>
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-      <div data-aos="fade-right">
-        <h3 class="text-2xl font-bold text-white mb-4">Engineering software at the intersection of <span class="gradient-text">scale &amp; elegance</span></h3>
-        <p class="text-slate-400 leading-relaxed mb-5">I'm a 3rd-year ICT student at Jahangirnagar University with a deep focus on full-stack web development and algorithmic problem solving. I architect systems from database schema through to responsive UI — using <span class="text-indigo-400 font-semibold">Django</span> and <span style="color:#22d3ee" class="font-semibold">MERN stack</span> to build features that scale.</p>
-        <p class="text-slate-400 leading-relaxed mb-6">I actively contribute to <span class="text-white font-semibold">OWASP DefectDojo</span>, an enterprise vulnerability management platform — my PR #14754 passed a 150+ check CI/CD pipeline and was merged into main. I bring the same rigour to personal projects: from AES-256 encrypted chat to custom RBAC systems.</p>
-        <div class="flex flex-wrap gap-3">
-          <span class="badge badge-indigo"><i class="fas fa-map-marker-alt mr-1"></i>Dhaka, Bangladesh</span>
-          <span class="badge badge-cyan"><i class="fas fa-graduation-cap mr-1"></i>CGPA: 3.70</span>
-          <span class="badge badge-green"><i class="fas fa-circle mr-1 text-xs"></i>Available</span>
-        </div>
+  <!-- CORE EXPERTISE PILLARS (3D BENTO GRID) ─────────────────────────────── -->
+  <section id="expertise" class="py-24 px-6 relative z-10">
+    <div class="max-w-6xl mx-auto">
+      
+      <div class="text-center mb-16">
+        <span class="tech-pill tech-pill-cyan mb-3">Architectural Capabilities</span>
+        <h2 class="font-display text-4xl sm:text-5xl font-extrabold text-white">
+          Engineering <span class="gradient-text">Pillars</span>
+        </h2>
+        <p class="text-slate-400 text-base max-w-xl mx-auto mt-4">
+          Core technical domains refined through enterprise banking systems, open-source maintainership, and machine learning research.
+        </p>
       </div>
-      <div data-aos="fade-left" data-aos-delay="150">
-        <div class="glow-card glow-card-featured p-8">
-          <div class="flex items-start gap-4 mb-6">
-            <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex-shrink-0">🎓</div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- Pillar 1: Full-Stack & Systems -->
+        <div class="tilt-card p-8 flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-indigo-500/15 border border-indigo-500/30 text-indigo-400 flex items-center justify-center text-2xl mb-6 translate-z-sm">
+              <i class="fas fa-server"></i>
+            </div>
+            <h3 class="font-display text-2xl font-bold text-white mb-3 translate-z-md">
+              Scalable Systems &amp; Full-Stack
+            </h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+              Engineering high-throughput backends and reactive frontends with robust database modeling, ACID safety, and real-time socket communication.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-4 border-t border-white/5">
+            <span class="tech-pill">Django</span>
+            <span class="tech-pill">Node.js</span>
+            <span class="tech-pill">Express</span>
+            <span class="tech-pill">React</span>
+            <span class="tech-pill">Next.js</span>
+            <span class="tech-pill">PostgreSQL</span>
+            <span class="tech-pill">MongoDB</span>
+            <span class="tech-pill">Docker</span>
+            <span class="tech-pill">Kafka</span>
+            <span class="tech-pill">WebSockets</span>
+          </div>
+        </div>
+
+        <!-- Pillar 2: AI & Computer Vision -->
+        <div class="tilt-card p-8 flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-cyan-500/15 border border-cyan-500/30 text-cyan-400 flex items-center justify-center text-2xl mb-6 translate-z-sm">
+              <i class="fas fa-brain"></i>
+            </div>
+            <h3 class="font-display text-2xl font-bold text-white mb-3 translate-z-md">
+              Human-Centered AI &amp; Vision
+            </h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+              Architecting multi-agent decision platforms, automated dataset pipelines, and computer vision models for edge detection and environmental alerting.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-4 border-t border-white/5">
+            <span class="tech-pill tech-pill-cyan">Python</span>
+            <span class="tech-pill tech-pill-cyan">TensorFlow</span>
+            <span class="tech-pill tech-pill-cyan">Scikit-Learn</span>
+            <span class="tech-pill tech-pill-cyan">YOLO</span>
+            <span class="tech-pill tech-pill-cyan">OpenCV</span>
+            <span class="tech-pill tech-pill-cyan">Pandas</span>
+            <span class="tech-pill tech-pill-cyan">NumPy</span>
+            <span class="tech-pill tech-pill-cyan">Multi-Agent</span>
+          </div>
+        </div>
+
+        <!-- Pillar 3: Usable Privacy & Security -->
+        <div class="tilt-card p-8 flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-purple-500/15 border border-purple-500/30 text-purple-400 flex items-center justify-center text-2xl mb-6 translate-z-sm">
+              <i class="fas fa-shield-halved"></i>
+            </div>
+            <h3 class="font-display text-2xl font-bold text-white mb-3 translate-z-md">
+              Usable Privacy &amp; Cybersecurity
+            </h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+              Applying defense-in-depth principles: OWASP mitigation, end-to-end AES-256 payload encryption, stateless JWT auth, and vulnerability management.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-4 border-t border-white/5">
+            <span class="tech-pill">OWASP Top 10</span>
+            <span class="tech-pill">VAPT</span>
+            <span class="tech-pill">Burp Suite</span>
+            <span class="tech-pill">AES-256</span>
+            <span class="tech-pill">Stateless JWT</span>
+            <span class="tech-pill">3-Tier RBAC</span>
+            <span class="tech-pill">CI/CD AppSec</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROFESSIONAL EXPERIENCE SECTION ───────────────────────────────────── -->
+  <section id="experience" class="py-24 px-6 relative z-10 bg-slate-950/30 border-t border-white/5">
+    <div class="max-w-5xl mx-auto">
+      
+      <div class="text-center mb-16">
+        <span class="tech-pill tech-pill-cyan mb-3">Professional Track Record</span>
+        <h2 class="font-display text-4xl sm:text-5xl font-extrabold text-white">
+          Work <span class="gradient-text">Experience</span>
+        </h2>
+      </div>
+
+      <div class="space-y-8">
+
+        <!-- Role 1: Al-Arafah Islami Bank PLC -->
+        <div class="tilt-card p-8 md:p-10">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-5 border-b border-white/5 pb-5">
             <div>
-              <h3 class="text-xl font-bold text-white">B.Sc. in Information &amp; Communication Technology</h3>
-              <p class="font-semibold mt-1" style="color:#22d3ee">Jahangirnagar University, Dhaka</p>
-              <p class="text-slate-500 text-sm mt-1">Feb 2023 — May 2027 (Expected)</p>
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono font-semibold mb-2">
+                <i class="fas fa-circle text-[8px] animate-pulse"></i>Present Role
+              </div>
+              <h3 class="font-display text-2xl font-bold text-white">Al-Arafah Islami Bank PLC</h3>
+              <p class="text-cyan-400 font-mono text-sm font-semibold">IT Intern &middot; ICT Division</p>
+            </div>
+            <div class="text-left md:text-right font-mono text-xs text-slate-400">
+              <p class="text-white font-medium">Aug 2026 &ndash; Present</p>
+              <p class="text-slate-500">Dhaka, Bangladesh (On-site)</p>
             </div>
           </div>
-          <div class="flex items-center gap-6 pt-5 border-t border-slate-800">
+          <p class="text-slate-300 text-sm leading-relaxed mb-4">
+            Analyzing enterprise IT infrastructure at Head Office, focusing on Core Banking Systems (CBS), secure financial networks, and critical security protocols supporting large-scale Mobile and Internet Banking operations.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="tech-pill">Core Banking Systems (CBS)</span>
+            <span class="tech-pill">Enterprise Networks</span>
+            <span class="tech-pill">FinTech Security</span>
+            <span class="tech-pill">Internet Banking Infrastructure</span>
+          </div>
+        </div>
+
+        <!-- Role 2: FlyRank AI -->
+        <div class="tilt-card p-8 md:p-10">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-5 border-b border-white/5 pb-5">
             <div>
-              <p class="text-slate-500 text-xs uppercase tracking-widest font-semibold mb-1">CGPA</p>
-              <p class="stat-number gradient-text text-4xl">3.70</p>
-              <p class="text-slate-600 text-xs mt-1">Up to 5th Semester</p>
+              <h3 class="font-display text-2xl font-bold text-white">FlyRank AI</h3>
+              <p class="text-indigo-400 font-mono text-sm font-semibold">Machine Learning Engineering Intern</p>
             </div>
-            <div class="w-px h-16 bg-slate-800 flex-shrink-0"></div>
-            <div>
-              <p class="text-slate-500 text-xs uppercase tracking-widest font-semibold mb-2">Core Coursework</p>
-              <div class="flex flex-wrap gap-1.5">
-                <span class="tech-tag">Algorithms</span>
-                <span class="tech-tag">OS</span>
-                <span class="tech-tag">Networks</span>
-                <span class="tech-tag">Security</span>
+            <div class="text-left md:text-right font-mono text-xs text-slate-400">
+              <p class="text-white font-medium">Jul 2026 &ndash; Sep 2026</p>
+              <p class="text-slate-500">Remote</p>
+            </div>
+          </div>
+          <p class="text-slate-300 text-sm leading-relaxed mb-4">
+            Built predictive machine learning models using Python, Scikit-Learn, and TensorFlow. Engineered automated Pandas/NumPy data pipelines that reduced raw dataset preparation and cleansing time by <strong class="text-cyan-400">40%</strong>.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="tech-pill tech-pill-cyan">Python</span>
+            <span class="tech-pill tech-pill-cyan">TensorFlow</span>
+            <span class="tech-pill tech-pill-cyan">Scikit-Learn</span>
+            <span class="tech-pill tech-pill-cyan">Pandas &middot; NumPy</span>
+            <span class="tech-pill tech-pill-cyan">40% Pipeline Optimization</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT & 3D IDENTITY FLIP CARD SECTION ──────────────────────────────── -->
+  <section id="about" class="py-24 px-6 relative z-10">
+    <div class="max-w-6xl mx-auto">
+      
+      <div class="text-center mb-16">
+        <span class="tech-pill tech-pill-cyan mb-3">Identity &amp; Academia</span>
+        <h2 class="font-display text-4xl sm:text-5xl font-extrabold text-white">
+          About &amp; <span class="gradient-text">Education</span>
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Column: Interactive 3D Hologram Identity Card -->
+        <div class="lg:col-span-5 flex flex-col items-center">
+          <div class="flip-card-wrapper">
+            <div class="flip-card-inner">
+              
+              <!-- FRONT FACE: Formal Photograph (Nasor Hidar.jpeg) -->
+              <div class="flip-card-front flex flex-col">
+                <div class="relative w-full h-full">
+                  <img src="./Nasor%20Hidar.jpeg" alt="Nasor Hidar" class="w-full h-full object-cover object-top" loading="eager">
+                  <div class="hologram-scanline"></div>
+                  <div class="specular-glare"></div>
+                  <!-- Bottom ID Overlay -->
+                  <div class="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent">
+                    <p class="font-display font-bold text-xl text-white">Nasor Hidar</p>
+                    <p class="text-cyan-400 font-mono text-xs">ICT, Jahangirnagar University</p>
+                    <div class="mt-2 flex items-center justify-between text-[11px] font-mono text-slate-400">
+                      <span>SEC_LEVEL: 01</span>
+                      <span class="text-indigo-400"><i class="fas fa-sync-alt mr-1"></i>Click / Tap to flip</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- BACK FACE: Cyber Avatar (Avater-Nasor.jpg) -->
+              <div class="flip-card-back flex flex-col p-6 justify-between relative">
+                <div class="relative w-full h-44 rounded-xl overflow-hidden mb-4 border border-white/10">
+                  <img src="./Avater-Nasor.jpg" alt="Nasor Hidar Avatar" class="w-full h-full object-cover" loading="eager">
+                  <div class="hologram-scanline"></div>
+                  <div class="specular-glare"></div>
+                </div>
+                <div class="font-mono text-xs space-y-2 text-slate-300">
+                  <div class="flex justify-between border-b border-white/10 pb-1">
+                    <span class="text-slate-500">HANDLE:</span>
+                    <span class="text-cyan-400">@NasorHidar</span>
+                  </div>
+                  <div class="flex justify-between border-b border-white/10 pb-1">
+                    <span class="text-slate-500">CGPA:</span>
+                    <span class="text-emerald-400 font-bold">3.70 / 4.00</span>
+                  </div>
+                  <div class="flex justify-between border-b border-white/10 pb-1">
+                    <span class="text-slate-500">OPEN SOURCE:</span>
+                    <span class="text-indigo-300">OWASP DefectDojo</span>
+                  </div>
+                  <div class="flex justify-between border-b border-white/10 pb-1">
+                    <span class="text-slate-500">LOCATION:</span>
+                    <span>Savar, Dhaka</span>
+                  </div>
+                </div>
+                <div class="pt-3 text-center border-t border-white/10">
+                  <span class="text-[11px] font-mono text-cyan-400/80">3D Interactive Holographic ID</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <button id="trigger-flip-card" class="mt-4 text-xs font-mono text-slate-400 hover:text-cyan-400 transition-colors flex items-center gap-1.5 focus:outline-none">
+            <i class="fas fa-rotate"></i>
+            <span>Flip Identity Card</span>
+          </button>
+        </div>
+
+        <!-- Right Column: Academic Credentials & Rigour -->
+        <div class="lg:col-span-7 space-y-6">
+          
+          <!-- Degree Card -->
+          <div class="tilt-card p-8">
+            <div class="flex items-start gap-5">
+              <div class="w-14 h-14 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-2xl flex items-center justify-center flex-shrink-0 translate-z-sm">
+                🎓
+              </div>
+              <div class="flex-1">
+                <span class="tech-pill tech-pill-emerald text-[11px] mb-2">Merit Scholarship Recipient</span>
+                <h3 class="font-display text-xl sm:text-2xl font-bold text-white">
+                  B.Sc. in Information &amp; Communication Technology
+                </h3>
+                <p class="text-cyan-400 font-medium text-sm mt-0.5">Jahangirnagar University, Savar, Dhaka</p>
+                <p class="text-slate-500 font-mono text-xs mt-1">Expected May 2027 &middot; CGPA: <strong class="text-white">3.70 / 4.00</strong></p>
+                <p class="text-slate-400 text-sm mt-3 leading-relaxed">
+                  Awarded the <strong class="text-slate-200">Academic Performance Scholarship</strong> for achieving a <strong class="text-cyan-400 font-mono">3.73 CGPA</strong> in the 2nd academic year. Rigorous study in Distributed Computing, Algorithms, Operating Systems, Cryptography, and Computer Vision.
+                </p>
               </div>
             </div>
           </div>
+
+          <!-- Higher Secondary Card -->
+          <div class="tilt-card p-8">
+            <div class="flex items-start gap-5">
+              <div class="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-2xl flex items-center justify-center flex-shrink-0 translate-z-sm">
+                🏛️
+              </div>
+              <div class="flex-1">
+                <span class="tech-pill text-[11px] mb-2">Perfect Score</span>
+                <h3 class="font-display text-xl sm:text-2xl font-bold text-white">
+                  Higher Secondary Certificate (Science)
+                </h3>
+                <p class="text-cyan-400 font-medium text-sm mt-0.5">Notre Dame College, Dhaka</p>
+                <p class="text-slate-500 font-mono text-xs mt-1">Feb 2022 &middot; GPA: <strong class="text-white">5.00 / 5.00</strong></p>
+                <p class="text-slate-400 text-sm mt-2 leading-relaxed">
+                  Graduated from Bangladesh's premier collegiate institution with the highest academic honors in advanced physics, higher mathematics, and chemistry.
+                </p>
+              </div>
+            </div>
+          </div>
+
         </div>
-      </div>
-    </div>
-    <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-5" data-aos data-aos-delay="200">
-      <div class="glass-static p-5 flex items-center gap-4">
-        <div class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 flex-shrink-0"><i class="fas fa-shield-halved"></i></div>
-        <div><p class="text-white font-semibold text-sm">OWASP DefectDojo</p><p class="text-slate-500 text-xs">Open Source Contributor · PR #14754</p></div>
-      </div>
-      <div class="glass-static p-5 flex items-center gap-4">
-        <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background:rgba(34,211,238,0.1);border:1px solid rgba(34,211,238,0.2);color:#22d3ee"><i class="fas fa-hands-helping"></i></div>
-        <div><p class="text-white font-semibold text-sm">Futurenations (UNDP Project)</p><p class="text-slate-500 text-xs">Volunteer · Apr 2026 — Present</p></div>
-      </div>
-      <div class="glass-static p-5 flex items-center gap-4">
-        <div class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 flex-shrink-0"><i class="fas fa-trophy"></i></div>
-        <div><p class="text-white font-semibold text-sm">ICPC &amp; IEEE Xtreme</p><p class="text-slate-500 text-xs">Competitive Programming Contestant</p></div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- CONTACT ────────────────────────────────────────── -->
-<section id="contact" class="py-28 px-6">
-  <div class="max-w-5xl mx-auto">
-    <div class="text-center mb-14" data-aos>
-      <span class="badge badge-indigo mb-4"><i class="fas fa-paper-plane mr-1"></i>Contact</span>
-      <h2 class="text-4xl md:text-5xl font-black text-white mt-3">Let's <span class="gradient-text">Connect</span></h2>
-      <div class="section-divider"></div>
-      <p class="text-slate-400 mt-5">Open to full-stack roles, SWE internships, and exciting collaborations.</p>
-    </div>
-    <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 items-start">
-      <div class="lg:col-span-2 flex flex-col gap-5" data-aos="fade-right">
-        <a href="mailto:nasorhidar@gmail.com" class="glass p-5 flex items-center gap-4 group">
-          <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 text-lg group-hover:bg-indigo-500 group-hover:text-white transition-all duration-300 flex-shrink-0"><i class="fas fa-envelope"></i></div>
-          <div><p class="text-slate-400 text-xs uppercase tracking-wider mb-0.5">Email</p><p class="text-white font-medium text-sm">nasorhidar@gmail.com</p></div>
-        </a>
-        <a href="https://www.linkedin.com/in/nasor-hidar" target="_blank" class="glass p-5 flex items-center gap-4 group">
-          <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 text-lg group-hover:bg-blue-500 group-hover:text-white transition-all duration-300 flex-shrink-0"><i class="fab fa-linkedin"></i></div>
-          <div><p class="text-slate-400 text-xs uppercase tracking-wider mb-0.5">LinkedIn</p><p class="text-white font-medium text-sm">nasor-hidar</p></div>
-        </a>
-        <a href="https://github.com/NasorHidar" target="_blank" class="glass p-5 flex items-center gap-4 group">
-          <div class="w-12 h-12 rounded-xl bg-slate-700/50 border border-slate-600/50 flex items-center justify-center text-slate-300 text-lg group-hover:bg-white group-hover:text-slate-950 transition-all duration-300 flex-shrink-0"><i class="fab fa-github"></i></div>
-          <div><p class="text-slate-400 text-xs uppercase tracking-wider mb-0.5">GitHub</p><p class="text-white font-medium text-sm">NasorHidar</p></div>
-        </a>
       </div>
-      <form id="contact-form" action="https://formspree.io/f/mlgaaklq" method="POST" class="lg:col-span-3 glass-static p-8" data-aos="fade-left" data-aos-delay="150">
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
-          <div><label for="cf-name" class="block text-slate-400 text-sm mb-2 font-medium">Name</label><input id="cf-name" name="name" type="text" required placeholder="John Doe" class="w-full px-4 py-3 rounded-xl bg-slate-800/60 border border-slate-700 text-white placeholder-slate-600 outline-none transition-all text-sm"></div>
-          <div><label for="cf-email" class="block text-slate-400 text-sm mb-2 font-medium">Email</label><input id="cf-email" name="email" type="email" required placeholder="you@email.com" class="w-full px-4 py-3 rounded-xl bg-slate-800/60 border border-slate-700 text-white placeholder-slate-600 outline-none transition-all text-sm"></div>
+    </div>
+  </section>
+
+  <!-- FEATURED WORK PREVIEW ──────────────────────────────────────────────── -->
+  <section class="py-20 px-6 relative z-10 border-t border-white/5 bg-slate-950/40">
+    <div class="max-w-6xl mx-auto">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+        <div>
+          <span class="tech-pill tech-pill-cyan mb-2">Selected Production Highlights</span>
+          <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white">
+            Featured <span class="gradient-text">Deployments</span>
+          </h2>
         </div>
-        <div class="mb-5"><label for="cf-msg" class="block text-slate-400 text-sm mb-2 font-medium">Message</label><textarea id="cf-msg" name="message" rows="5" required placeholder="Tell me about your project or role…" class="w-full px-4 py-3 rounded-xl bg-slate-800/60 border border-slate-700 text-white placeholder-slate-600 outline-none transition-all text-sm resize-none"></textarea></div>
-        <button id="submit-btn" type="submit"
-                class="w-full py-4 font-bold rounded-xl transition-all duration-300 hover:-translate-y-0.5 text-white"
-                style="background:linear-gradient(135deg,#6366f1,#4f46e5);box-shadow:0 4px 18px rgba(99,102,241,0.35);">
-          Send Message <i class="fas fa-paper-plane ml-2"></i>
-        </button>
-        <span id="form-status" class="hidden"></span>
-      </form>
-    </div>
-  </div>
-</section>
+        <a href="projects.html" class="inline-flex items-center gap-2 text-cyan-400 hover:text-white font-mono text-sm transition-colors">
+          <span>View Full Gallery (5 Projects)</span>
+          <i class="fas fa-arrow-right text-xs"></i>
+        </a>
+      </div>
 
-<!-- FOOTER ─────────────────────────────────────────── -->
-<footer class="border-t border-slate-800/60 py-10 px-6">
-  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-    <p class="text-slate-500 text-sm">© 2026 <span class="text-white font-semibold">Nasor Hidar</span>. All rights reserved.</p>
-    <p class="text-slate-600 text-xs">Built with <span class="text-red-400">❤</span> Love.</p>
-    <div class="flex gap-5">
-      <a href="https://github.com/NasorHidar" target="_blank" class="text-slate-600 hover:text-indigo-400 transition-colors"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/nasor-hidar" target="_blank" class="text-slate-600 hover:text-cyan-400 transition-colors"><i class="fab fa-linkedin"></i></a>
-      <a href="mailto:nasorhidar@gmail.com" class="text-slate-600 hover:text-indigo-400 transition-colors"><i class="fas fa-envelope"></i></a>
-    </div>
-  </div>
-</footer>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-<script src="nav.js"></script>
-<script src="script.js"></script>
+        <!-- Krishi Bondhu AI -->
+        <div class="tilt-card p-8 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="tech-pill tech-pill-emerald text-xs">NASA Space Apps 2026</span>
+              <span class="text-amber-400 text-xs font-mono"><i class="fas fa-trophy mr-1"></i>Galactic Problem Solver</span>
+            </div>
+            <h3 class="font-display text-2xl font-bold text-white mb-2">Krishi Bondhu AI</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+              Multi-agent decision-support platform delivering climate-resilient crop rotation, soil parameter analysis, and real-time yield forecasting.
+            </p>
+          </div>
+          <div class="flex items-center justify-between pt-4 border-t border-white/5 font-mono text-xs">
+            <span class="text-slate-400">Team Nokkhotro</span>
+            <a href="projects.html" class="text-cyan-400 hover:underline">Read Architecture &rarr;</a>
+          </div>
+        </div>
+
+        <!-- ChatNest -->
+        <div class="tilt-card p-8 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="tech-pill tech-pill-cyan text-xs">Real-Time &middot; Privacy</span>
+              <span class="text-purple-400 text-xs font-mono"><i class="fas fa-lock mr-1"></i>AES-256 E2EE</span>
+            </div>
+            <h3 class="font-display text-2xl font-bold text-white mb-2">ChatNest</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+              Full-stack secure messaging web application with stateless JWT authentication, AES-256 encrypted payload routing, and verified 100+ concurrent WebSockets.
+            </p>
+          </div>
+          <div class="flex items-center justify-between pt-4 border-t border-white/5 font-mono text-xs">
+            <a href="https://github.com/NasorHidar/ChatNest" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-white">
+              <i class="fab fa-github mr-1"></i>Source Code
+            </a>
+            <a href="projects.html" class="text-cyan-400 hover:underline">Live Breakdown &rarr;</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT & COLLABORATION SECTION ───────────────────────────────────── -->
+  <section id="contact" class="py-24 px-6 relative z-10 border-t border-white/5">
+    <div class="max-w-5xl mx-auto">
+      
+      <div class="text-center mb-16">
+        <span class="tech-pill tech-pill-cyan mb-3">Transmission Channel</span>
+        <h2 class="font-display text-4xl sm:text-5xl font-extrabold text-white">
+          Get in <span class="gradient-text">Touch</span>
+        </h2>
+        <p class="text-slate-400 text-base max-w-lg mx-auto mt-3">
+          Available for Software Engineering roles, Full-Stack internships, and research collaborations.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        
+        <!-- Left: Direct Telemetry & Coordinates -->
+        <div class="lg:col-span-5 space-y-4">
+          
+          <a href="mailto:nasorhidar@gmail.com" class="tilt-card p-5 flex items-center gap-4 group block">
+            <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center text-lg group-hover:bg-indigo-500 group-hover:text-white transition-all">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div>
+              <p class="font-mono text-xs text-slate-500 uppercase tracking-wider">Direct Email</p>
+              <p class="text-white font-medium text-sm">nasorhidar@gmail.com</p>
+            </div>
+          </a>
+
+          <a href="tel:+8801877695242" class="tilt-card p-5 flex items-center gap-4 group block">
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center text-lg group-hover:bg-cyan-500 group-hover:text-slate-950 transition-all">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div>
+              <p class="font-mono text-xs text-slate-500 uppercase tracking-wider">Voice / WhatsApp</p>
+              <p class="text-white font-medium text-sm">+880 1877695242</p>
+            </div>
+          </a>
+
+          <div class="tilt-card p-5 flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center text-lg">
+              <i class="fas fa-location-dot"></i>
+            </div>
+            <div>
+              <p class="font-mono text-xs text-slate-500 uppercase tracking-wider">Station Coordinates</p>
+              <p class="text-white font-medium text-sm">Savar, Dhaka, Bangladesh</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Formspree Contact Form -->
+        <div class="lg:col-span-7">
+          <form id="contact-form" action="https://formspree.io/f/mlgaaklq" method="POST" class="tilt-card p-8">
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
+              <div>
+                <label for="cf-name" class="block font-mono text-xs text-slate-400 uppercase tracking-wider mb-2">Your Name</label>
+                <input id="cf-name" name="name" type="text" required placeholder="Dr. Alan Turing" class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-white/10 text-white placeholder-slate-600 focus:outline-none focus:border-cyan-400 font-body text-sm transition-all">
+              </div>
+              <div>
+                <label for="cf-email" class="block font-mono text-xs text-slate-400 uppercase tracking-wider mb-2">Your Email</label>
+                <input id="cf-email" name="email" type="email" required placeholder="alan@bletchley.org" class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-white/10 text-white placeholder-slate-600 focus:outline-none focus:border-cyan-400 font-body text-sm transition-all">
+              </div>
+            </div>
+
+            <div class="mb-6">
+              <label for="cf-msg" class="block font-mono text-xs text-slate-400 uppercase tracking-wider mb-2">Message</label>
+              <textarea id="cf-msg" name="message" rows="5" required placeholder="Let's build something remarkable..." class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-white/10 text-white placeholder-slate-600 focus:outline-none focus:border-cyan-400 font-body text-sm transition-all resize-none"></textarea>
+            </div>
+
+            <button id="submit-btn" type="submit" class="btn-magnetic-primary w-full py-4 text-sm font-bold tracking-wider">
+              <span>Send Secure Message</span>
+              <i class="fas fa-paper-plane text-xs"></i>
+            </button>
+
+            <span id="form-status" class="hidden"></span>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER ─────────────────────────────────────────────────────────────── -->
+  <footer class="py-10 px-6 border-t border-white/5 relative z-10 bg-slate-950/80">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-500">
+      <p>&copy; 2026 <span class="text-white font-semibold">Nasor Hidar</span> &middot; Engineered with Three.js &amp; GSAP</p>
+      <div class="flex items-center gap-6">
+        <a href="https://github.com/NasorHidar" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 transition-colors">GitHub</a>
+        <a href="https://www.linkedin.com/in/nasor-hidar" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-400 transition-colors">LinkedIn</a>
+        <a href="Nasor_Hidar_Resume.pdf" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400 transition-colors">Resume</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="nav.js"></script>
+  <script type="module" src="scene3d.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

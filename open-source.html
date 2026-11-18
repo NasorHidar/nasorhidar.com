@@ -1,201 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Nasor Hidar's open-source contributions — OWASP DefectDojo, Zulip, freeCodeCamp.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nasor Hidar's Open Source & Security Contributions — OWASP DefectDojo PR #14754, 150+ CI/CD checks passed, upstream Django security engineering.">
   <title>Open Source & Security | Nasor Hidar</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Open Source & Security | Nasor Hidar">
+  <meta property="og:description" content="Merged upstream contributor to OWASP DefectDojo. 150+ CI checks passed in enterprise vulnerability management.">
+  <meta property="og:image" content="./preview.png">
+
+  <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
+  <!-- CDNs: Tailwind, FontAwesome -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Importmap for Three.js ES Module -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+      }
+    }
+  </script>
 </head>
-<body class="bg-[#020817] text-slate-50 grid-bg">
+<body data-scene="open-source" class="bg-[#06070d] text-slate-100 selection:bg-cyan-500 selection:text-slate-950">
 
-<!-- PAGE HERO -->
-<section class="relative pt-36 pb-0 px-6 overflow-hidden">
-  <div class="orb w-[500px] h-[500px] bg-teal-500 opacity-[0.07]" style="top:-15%;right:-8%"></div>
-  <div class="orb w-72 h-72 bg-cyan-500 opacity-[0.06]" style="bottom:0;left:-5%"></div>
-  <div class="max-w-6xl mx-auto relative z-10">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center min-h-[420px]">
-      <!-- Text -->
-      <div class="pb-16 lg:pb-20">
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-teal-500/30 bg-teal-500/5 text-teal-400 text-sm font-medium mb-6" data-aos>
-          <i class="fab fa-github mr-1"></i>Open Source Contributions
+  <!-- 3D WebGL Background Canvas -->
+  <canvas id="webgl-canvas"></canvas>
+
+  <!-- Cyber Spatial Grid Overlay -->
+  <div class="cyber-grid-overlay"></div>
+
+  <!-- HERO SECTION ────────────────────────────────────────────────────────── -->
+  <section class="relative pt-36 pb-16 px-6 z-10 overflow-hidden">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <div class="lg:col-span-8">
+          <div class="hero-animate inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-950/30 text-emerald-400 text-xs font-mono font-medium mb-6 backdrop-blur-md">
+            <i class="fas fa-code-branch text-xs"></i>
+            <span>Upstream Security Engineering</span>
+          </div>
+
+          <h1 class="hero-animate font-display text-5xl sm:text-6xl font-extrabold text-white tracking-tight leading-[1.1] mb-6">
+            Open Source &amp;<br>
+            <span class="gradient-text">Security Ecosystems</span>
+          </h1>
+
+          <p class="hero-animate text-slate-400 text-base sm:text-lg max-w-2xl leading-relaxed">
+            Contributing production patches to enterprise cybersecurity frameworks, navigating complex CI/CD verification suites, and collaborating with global open-source maintainers.
+          </p>
         </div>
-        <h1 class="text-5xl md:text-6xl font-black text-white leading-tight mb-5" data-aos data-aos-delay="100">
-          Open Source<br>&amp; <span class="gradient-text">Security</span>
-        </h1>
-        <p class="text-slate-400 text-lg leading-relaxed max-w-xl" data-aos data-aos-delay="200">
-          Navigating large-scale codebases, submitting production-grade patches, and engaging with global developer communities.
-        </p>
-        <div class="flex flex-wrap gap-3 mt-7" data-aos data-aos-delay="300">
-          <span class="badge badge-teal"><i class="fas fa-code-merge mr-1"></i>PR Merged</span>
-          <span class="badge badge-cyan"><i class="fas fa-robot mr-1"></i>150+ CI Checks</span>
-          <span class="badge badge-indigo"><i class="fas fa-users mr-1"></i>Community Active</span>
+
+        <div class="lg:col-span-4 hidden lg:flex justify-end">
+          <div class="tilt-card p-4 max-w-xs border border-white/10 backdrop-blur-xl">
+            <img src="./hero_opensource.png" alt="Open Source Cyber Visual" class="rounded-xl w-full object-cover opacity-85 hover:opacity-100 transition-opacity" loading="lazy">
+            <div class="mt-3 text-center">
+              <span class="text-[11px] font-mono text-cyan-400/80">3D Torus Knot &middot; CI Orbit</span>
+            </div>
+          </div>
         </div>
-      </div>
-      <!-- Hero Image -->
-      <div class="hidden lg:flex items-end justify-end h-full" data-aos="fade-left" data-aos-delay="200">
-        <div class="relative w-full max-w-lg">
-          <div class="absolute inset-0 rounded-3xl" style="background:radial-gradient(ellipse at center,rgba(6,182,212,0.15) 0%,transparent 70%)"></div>
-          <img src="hero_opensource.png" alt="Open source contribution visualization" class="w-full rounded-3xl relative z-10 drop-shadow-2xl" style="filter:drop-shadow(0 0 40px rgba(6,182,212,0.2))">
-        </div>
+
       </div>
     </div>
-  </div>
-  <!-- Bottom fade -->
-  <div class="absolute bottom-0 left-0 right-0 h-24" style="background:linear-gradient(to bottom,transparent,#020817)"></div>
-</section>
+  </section>
 
-<!-- FEATURED: OWASP DefectDojo -->
-<section class="py-20 px-6">
-  <div class="max-w-5xl mx-auto">
-    <div class="text-center mb-12" data-aos>
-      <span class="badge badge-amber mb-3"><i class="fas fa-star mr-1"></i>Featured Contribution</span>
-      <h2 class="text-3xl md:text-4xl font-black text-white mt-3">OWASP <span class="gradient-text">DefectDojo</span></h2>
-      <div class="section-divider"></div>
-    </div>
+  <!-- OWASP DEFECTDOJO SPOTLIGHT ─────────────────────────────────────────── -->
+  <section class="py-10 pb-20 px-6 relative z-10">
+    <div class="max-w-6xl mx-auto">
+      
+      <div class="tilt-card p-8 sm:p-12 mb-16">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+          
+          <!-- Left: Narrative Breakdown -->
+          <div class="lg:col-span-7">
+            <div class="flex flex-wrap items-center gap-2 mb-4">
+              <span class="tech-pill tech-pill-emerald text-xs">
+                <i class="fas fa-shield-halved mr-1"></i>OWASP Foundation
+              </span>
+              <span class="tech-pill text-xs">django-DefectDojo</span>
+              <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-300 font-mono text-xs font-bold">
+                <i class="fas fa-check-double"></i> PR #14754 MERGED
+              </span>
+            </div>
 
-    <div class="glow-card glow-card-featured p-8 md:p-10" data-aos data-aos-delay="100">
-      <div class="flex flex-col md:flex-row gap-8">
-        <!-- Left -->
-        <div class="flex-1">
-          <div class="flex items-center gap-3 mb-5">
-            <div class="w-14 h-14 rounded-2xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center text-2xl flex-shrink-0">🛡️</div>
-            <div>
-              <h3 class="text-xl font-bold text-white">django-DefectDojo</h3>
-              <p class="text-slate-400 text-sm">Enterprise Vulnerability Management Platform</p>
+            <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white mb-4">
+              OWASP DefectDojo Upstream Contribution
+            </h2>
+
+            <p class="text-cyan-400 font-mono text-xs font-semibold mb-6">
+              Enterprise Vulnerability Management &middot; Core Django Backend Filter Patch
+            </p>
+
+            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+              DefectDojo is the premier open-source application vulnerability correlation and security orchestration tool utilized by Fortune 500 enterprises and DevSecOps teams worldwide.
+            </p>
+
+            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+              API consumers were previously restricted when querying findings by exact temporal boundaries. I engineered missing <code class="text-cyan-300 font-mono">django-filter</code> timestamp logic across the core API finding endpoints, introducing range filtering and date-boundary lookups that permit automated vulnerability ingest pipelines to sync precisely.
+            </p>
+
+            <div class="grid grid-cols-3 gap-4 mb-8">
+              <div class="p-4 rounded-xl bg-slate-900/80 border border-white/5 text-center">
+                <p class="font-mono text-2xl font-bold text-emerald-400" data-counter="150" data-suffix="+">150+</p>
+                <p class="text-[11px] font-mono text-slate-400 mt-1">CI/CD Tests Passed</p>
+              </div>
+              <div class="p-4 rounded-xl bg-slate-900/80 border border-white/5 text-center">
+                <p class="font-mono text-2xl font-bold text-cyan-400">3,400+</p>
+                <p class="text-[11px] font-mono text-slate-400 mt-1">GitHub Stars</p>
+              </div>
+              <div class="p-4 rounded-xl bg-slate-900/80 border border-white/5 text-center">
+                <p class="font-mono text-2xl font-bold text-indigo-400">#14754</p>
+                <p class="text-[11px] font-mono text-slate-400 mt-1">Merged Pull Request</p>
+              </div>
+            </div>
+
+            <a href="https://github.com/DefectDojo/django-DefectDojo/pull/14754" target="_blank" rel="noopener noreferrer" class="btn-magnetic-primary text-xs py-2.5 px-5">
+              <i class="fab fa-github"></i>
+              <span>Inspect Merged Pull Request #14754</span>
+              <i class="fas fa-external-link-alt text-[10px] ml-1"></i>
+            </a>
+          </div>
+
+          <!-- Right: Code Terminal Window -->
+          <div class="lg:col-span-5">
+            <div class="terminal-window">
+              <div class="terminal-header">
+                <div class="flex items-center gap-2">
+                  <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
+                  <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
+                  <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+                </div>
+                <span class="text-xs text-slate-400 font-mono">dojo/finding/queries.py</span>
+                <span class="text-[10px] text-emerald-400 font-mono font-bold">MERGED</span>
+              </div>
+              <div class="p-5 font-mono text-xs leading-relaxed text-slate-300 overflow-x-auto">
+                <div class="text-slate-500">// Nasor's timestamp filter implementation</div>
+                <div class="text-indigo-400 mt-2">class <span class="text-cyan-300">FindingFilter</span>(FilterSet):</div>
+                <div class="pl-4 text-slate-300">created = <span class="text-amber-300">DateTimeFromToRangeFilter</span>(</div>
+                <div class="pl-8 text-slate-400">field_name=<span class="text-emerald-300">'date'</span></div>
+                <div class="pl-4">)</div>
+                <div class="pl-4 text-slate-300">created_before = <span class="text-amber-300">DateTimeFilter</span>(</div>
+                <div class="pl-8 text-slate-400">field_name=<span class="text-emerald-300">'date'</span>,</div>
+                <div class="pl-8 text-slate-400">lookup_expr=<span class="text-emerald-300">'lte'</span></div>
+                <div class="pl-4">)</div>
+                <div class="pl-4 text-slate-300">created_after = <span class="text-amber-300">DateTimeFilter</span>(</div>
+                <div class="pl-8 text-slate-400">field_name=<span class="text-emerald-300">'date'</span>,</div>
+                <div class="pl-8 text-slate-400">lookup_expr=<span class="text-emerald-300">'gte'</span></div>
+                <div class="pl-4">)</div>
+                <div class="mt-4 pt-3 border-t border-white/5 text-[11px] text-emerald-400">
+                  <i class="fas fa-check-circle mr-1"></i> 150+ Matrix Tests &middot; Upstream Rebase Clean
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="flex flex-wrap gap-2 mb-6">
-            <span class="badge badge-amber"><i class="fab fa-python mr-1"></i>Django</span>
-            <span class="badge badge-cyan">REST API</span>
-            <span class="badge badge-green"><i class="fas fa-code-merge mr-1"></i>PR Merged</span>
-          </div>
+        </div>
+      </div>
 
-          <h4 class="text-white font-semibold mb-3">What I Built</h4>
-          <p class="text-slate-400 leading-relaxed mb-5">Enhanced data retrieval capabilities for API consumers by engineering missing <span class="text-cyan-400 font-mono font-semibold">django-filter</span> timestamp logic within the core Django backend — allowing clients to filter resources by exact creation and modification timestamps.</p>
-
-          <ul class="space-y-3 mb-7 text-sm text-slate-400">
-            <li class="flex items-start gap-3"><span class="w-5 h-5 rounded-full bg-teal-500/15 border border-teal-500/30 flex items-center justify-center text-teal-400 text-xs flex-shrink-0 mt-0.5"><i class="fas fa-check"></i></span>Navigated and passed <span class="text-white font-semibold mx-1">150+ CI/CD checks</span> across the test suite</li>
-            <li class="flex items-start gap-3"><span class="w-5 h-5 rounded-full bg-teal-500/15 border border-teal-500/30 flex items-center justify-center text-teal-400 text-xs flex-shrink-0 mt-0.5"><i class="fas fa-check"></i></span>Executed <span class="text-white font-semibold mx-1">upstream syncing &amp; multi-commit rebasing</span> against main</li>
-            <li class="flex items-start gap-3"><span class="w-5 h-5 rounded-full bg-teal-500/15 border border-teal-500/30 flex items-center justify-center text-teal-400 text-xs flex-shrink-0 mt-0.5"><i class="fas fa-check"></i></span>Engaged with maintainers through multiple review cycles to refine the implementation</li>
-          </ul>
-
-          <a href="https://github.com/DefectDojo/django-DefectDojo/pull/14754" target="_blank" id="owasp-pr-link" class="inline-flex items-center gap-2 px-6 py-3 bg-cyan-500/10 hover:bg-cyan-500 border border-cyan-500/30 hover:border-cyan-500 text-cyan-400 hover:text-slate-950 font-semibold rounded-xl transition-all duration-300 text-sm">
-            <i class="fab fa-github"></i> View Pull Request #14754 <i class="fas fa-external-link-alt text-xs"></i>
-          </a>
+      <!-- ANIMATED VISUAL CI/CD PIPELINE TRACKER ──────────────────────────── -->
+      <div class="mb-20">
+        <div class="text-center mb-12">
+          <span class="tech-pill tech-pill-cyan mb-2">Verification Telemetry</span>
+          <h2 class="font-display text-3xl font-extrabold text-white">
+            Upstream CI/CD <span class="gradient-text">Verification Pipeline</span>
+          </h2>
+          <p class="text-slate-400 text-sm max-w-xl mx-auto mt-2">
+            Every commit to DefectDojo must clear a gauntlet of 150+ parallel validation gates prior to maintainer approval.
+          </p>
         </div>
 
-        <!-- Right: Terminal -->
-        <div class="md:w-96 flex-shrink-0">
-          <div class="terminal">
-            <div class="terminal-header">
-              <span class="terminal-dot" style="background:#ff5f56"></span>
-              <span class="terminal-dot" style="background:#ffbd2e"></span>
-              <span class="terminal-dot" style="background:#27c93f"></span>
-              <span class="text-slate-500 text-xs ml-2">finding.py — filter patch</span>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+
+          <!-- Step 1 -->
+          <div class="pipeline-step active">
+            <div class="flex items-center justify-between mb-3">
+              <span class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-mono text-xs font-bold">01</span>
+              <span class="text-emerald-400 text-xs font-mono"><i class="fas fa-check mr-1"></i>Passed</span>
             </div>
-            <div class="terminal-body text-xs leading-loose">
-              <span class="cm"># Before: missing timestamp fields</span><br>
-              <span class="kw">class</span> <span class="fn">FindingFilter</span>(FilterSet):<br>
-              &nbsp;&nbsp;<span class="cm"># created_before / after — absent</span><br>
-              &nbsp;&nbsp;<span class="cm"># modified timestamps — absent</span><br>
-              <br>
-              <span class="cm"># After: Nasor's patch PR #14754</span><br>
-              <span class="kw">class</span> <span class="fn">FindingFilter</span>(FilterSet):<br>
-              &nbsp;&nbsp;created = <span class="fn">DateTimeFromToRangeFilter</span>(<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;field_name=<span class="str">'date'</span><br>
-              &nbsp;&nbsp;)<br>
-              &nbsp;&nbsp;created_before = <span class="fn">DateTimeFilter</span>(<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;field_name=<span class="str">'date'</span>,<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;lookup_expr=<span class="str">'lte'</span><br>
-              &nbsp;&nbsp;)<br>
-              &nbsp;&nbsp;created_after = <span class="fn">DateTimeFilter</span>(<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;field_name=<span class="str">'date'</span>,<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;lookup_expr=<span class="str">'gte'</span><br>
-              &nbsp;&nbsp;)<br>
-              <br>
-              <span class="cm"># CI: 150+ checks ✓ | Rebased ✓</span>
+            <h3 class="font-display font-bold text-white text-base mb-1">Pre-Commit &amp; Linting</h3>
+            <p class="text-slate-400 text-xs leading-relaxed">
+              Black code formatter, Flake8 style compliance, isort import alignment, and git hygiene hooks.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="pipeline-step active">
+            <div class="flex items-center justify-between mb-3">
+              <span class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-mono text-xs font-bold">02</span>
+              <span class="text-emerald-400 text-xs font-mono"><i class="fas fa-check mr-1"></i>Passed</span>
+            </div>
+            <h3 class="font-display font-bold text-white text-base mb-1">PyTest Matrix (150+)</h3>
+            <p class="text-slate-400 text-xs leading-relaxed">
+              Multi-version Python (3.10, 3.11) &amp; Django test matrix validating filter parameters against simulated finding queries.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="pipeline-step active">
+            <div class="flex items-center justify-between mb-3">
+              <span class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-mono text-xs font-bold">03</span>
+              <span class="text-emerald-400 text-xs font-mono"><i class="fas fa-check mr-1"></i>Passed</span>
+            </div>
+            <h3 class="font-display font-bold text-white text-base mb-1">Security &amp; VAPT Scans</h3>
+            <p class="text-slate-400 text-xs leading-relaxed">
+              Bandit static analysis, SonarQube quality gates, and dependency vulnerability audits.
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="pipeline-step active">
+            <div class="flex items-center justify-between mb-3">
+              <span class="w-8 h-8 rounded-lg bg-cyan-500/10 text-cyan-400 flex items-center justify-center font-mono text-xs font-bold">04</span>
+              <span class="text-purple-400 text-xs font-mono font-bold"><i class="fas fa-code-merge mr-1"></i>Merged</span>
+            </div>
+            <h3 class="font-display font-bold text-white text-base mb-1">Maintainer Sign-Off</h3>
+            <p class="text-slate-400 text-xs leading-relaxed">
+              Reviewed and approved by core maintainers; rebased onto main and shipped into enterprise releases.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- LEADERSHIP & COMMUNITY ENGAGEMENTS ──────────────────────────────── -->
+      <div>
+        <div class="text-center mb-12">
+          <span class="tech-pill tech-pill-cyan mb-2">Community Impact</span>
+          <h2 class="font-display text-3xl font-extrabold text-white">
+            Leadership &amp; <span class="gradient-text">Volunteering</span>
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+          <!-- IEEE Student Branch JU -->
+          <div class="tilt-card p-8">
+            <div class="flex items-start gap-5">
+              <div class="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-amber-400 text-2xl flex items-center justify-center flex-shrink-0 translate-z-sm">
+                ⚡
+              </div>
+              <div>
+                <span class="tech-pill text-xs mb-2">Executive Committee</span>
+                <h3 class="font-display text-xl font-bold text-white">Treasurer &middot; IEEE Student Branch JU</h3>
+                <p class="text-slate-400 font-mono text-xs mt-1">Feb 2026 &ndash; Present (Active Member since Nov 2023)</p>
+                <p class="text-slate-300 text-sm mt-3 leading-relaxed">
+                  Managing financial budgeting, sponsorship audits, and operational allocations for major departmental hackathons, tech seminars, and competitive programming bootcamps at Jahangirnagar University.
+                </p>
+              </div>
             </div>
           </div>
 
-          <!-- Stats -->
-          <div class="grid grid-cols-3 gap-3 mt-4">
-            <div class="glass-static p-4 text-center"><p class="stat-number gradient-text text-2xl">150+</p><p class="text-slate-500 text-xs mt-1">CI Checks</p></div>
-            <div class="glass-static p-4 text-center"><p class="stat-number gradient-text text-2xl">3k+</p><p class="text-slate-500 text-xs mt-1">Repo Stars</p></div>
-            <div class="glass-static p-4 text-center"><p class="stat-number gradient-text text-2xl">PR</p><p class="text-slate-500 text-xs mt-1">#14754</p></div>
+          <!-- Futurenation (UNDP & Grameenphone) -->
+          <div class="tilt-card p-8">
+            <div class="flex items-start gap-5">
+              <div class="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-2xl flex items-center justify-center flex-shrink-0 translate-z-sm">
+                🤝
+              </div>
+              <div>
+                <span class="tech-pill tech-pill-cyan text-xs mb-2">Youth Empowerment</span>
+                <h3 class="font-display text-xl font-bold text-white">Volunteer &middot; Futurenation</h3>
+                <p class="text-slate-400 font-mono text-xs mt-1">Apr 2026 &ndash; Present &middot; UNDP &amp; Grameenphone</p>
+                <p class="text-slate-300 text-sm mt-3 leading-relaxed">
+                  Volunteering in nationwide initiatives providing digital literacy, technical skill training, and career readiness frameworks for youth across Bangladesh under the United Nations Development Programme.
+                </p>
+              </div>
+            </div>
           </div>
+
         </div>
       </div>
+
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- OTHER ENGAGEMENTS -->
-<section class="py-20 px-6" style="background:linear-gradient(to bottom,rgba(6,182,212,.025),transparent)">
-  <div class="max-w-5xl mx-auto">
-    <div class="text-center mb-12" data-aos>
-      <span class="badge badge-teal mb-3"><i class="fas fa-users mr-1"></i>Community Engagement</span>
-      <h2 class="text-3xl md:text-4xl font-black text-white mt-3">Other <span class="gradient-text">Engagements</span></h2>
-      <div class="section-divider"></div>
-      <p class="text-slate-400 mt-5 max-w-xl mx-auto">Active participation in top-tier open-source communities demonstrates breadth of codebase navigation skills.</p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <!-- Zulip -->
-      <div class="glow-card p-7" data-aos data-aos-delay="100">
-        <div class="flex items-center gap-3 mb-5">
-          <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-2xl flex-shrink-0">💬</div>
-          <div>
-            <h3 class="text-lg font-bold text-white">Zulip</h3>
-            <p class="text-slate-500 text-sm">Open-source team chat platform</p>
-          </div>
-        </div>
-        <div class="flex flex-wrap gap-2 mb-4"><span class="badge badge-indigo">Fork</span><span class="tech-tag">Python</span><span class="tech-tag">Django</span></div>
-        <p class="text-slate-400 text-sm leading-relaxed">Forked and explored Zulip's enterprise chat infrastructure — analyzing their Django backend patterns, WebSocket event system, and multi-realm architecture as part of studying large-scale real-time communication systems.</p>
-        <a href="https://github.com/NasorHidar" target="_blank" class="mt-5 inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 text-sm font-semibold transition-colors">View on GitHub <i class="fas fa-arrow-right text-xs"></i></a>
-      </div>
-
-      <!-- freeCodeCamp -->
-      <div class="glow-card p-7" data-aos data-aos-delay="200">
-        <div class="flex items-center gap-3 mb-5">
-          <div class="w-12 h-12 rounded-xl bg-green-500/10 border border-green-500/20 flex items-center justify-center text-2xl flex-shrink-0">🏕️</div>
-          <div>
-            <h3 class="text-lg font-bold text-white">freeCodeCamp</h3>
-            <p class="text-slate-500 text-sm">Global open-source learning platform</p>
-          </div>
-        </div>
-        <div class="flex flex-wrap gap-2 mb-4"><span class="badge badge-green">Review</span><span class="tech-tag">Node.js</span><span class="tech-tag">MongoDB</span></div>
-        <p class="text-slate-400 text-sm leading-relaxed">Reviewed freeCodeCamp's MERN-stack codebase — studying their challenge submission API, race condition handling patterns, and concurrent user session management at scale. Applied learnings directly to ChatNest's WebSocket concurrency model.</p>
-        <a href="https://github.com/NasorHidar" target="_blank" class="mt-5 inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 text-sm font-semibold transition-colors">View on GitHub <i class="fas fa-arrow-right text-xs"></i></a>
+  <!-- FOOTER ─────────────────────────────────────────────────────────────── -->
+  <footer class="py-10 px-6 border-t border-white/5 relative z-10 bg-slate-950/80">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-500">
+      <p>&copy; 2026 <span class="text-white font-semibold">Nasor Hidar</span> &middot; Open Source Upstream Contributor</p>
+      <div class="flex items-center gap-6">
+        <a href="index.html" class="hover:text-white transition-colors">Home</a>
+        <a href="projects.html" class="hover:text-cyan-400 transition-colors">Projects</a>
+        <a href="achievements.html" class="hover:text-amber-400 transition-colors">Achievements</a>
+        <a href="Nasor_Hidar_Resume.pdf" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400 transition-colors">Resume</a>
       </div>
     </div>
+  </footer>
 
-    <!-- Philosophy card -->
-    <div class="glass-static p-8 mt-10 text-center" data-aos data-aos-delay="300">
-      <i class="fas fa-quote-left text-cyan-400/30 text-4xl mb-4 block"></i>
-      <p class="text-xl text-slate-300 font-medium italic max-w-2xl mx-auto leading-relaxed">"The best way to understand how enterprise systems are built is to read their code, contribute fixes, and ship those changes through a rigorous CI pipeline."</p>
-      <p class="text-slate-500 text-sm mt-4">— Nasor Hidar</p>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="border-t border-slate-800/60 py-10 px-6">
-  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-    <p class="text-slate-500 text-sm">© 2026 <span class="text-white font-semibold">Nasor Hidar</span>. All rights reserved.</p>
-    <p class="text-slate-600 text-xs">Built with <span class="text-red-400">❤</span> Love.</p>
-    <div class="flex gap-5">
-      <a href="https://github.com/NasorHidar" target="_blank" class="text-slate-600 hover:text-cyan-400 transition-colors"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/nasor-hidar" target="_blank" class="text-slate-600 hover:text-cyan-400 transition-colors"><i class="fab fa-linkedin"></i></a>
-      <a href="mailto:nasorhidar@gmail.com" class="text-slate-600 hover:text-cyan-400 transition-colors"><i class="fas fa-envelope"></i></a>
-    </div>
-  </div>
-</footer>
-
-<script src="nav.js"></script>
-<script src="script.js"></script>
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="nav.js"></script>
+  <script type="module" src="scene3d.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

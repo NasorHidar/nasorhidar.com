@@ -1,275 +1,441 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Nasor Hidar's achievements — competitive programming, ICPC, IEEE Xtreme, and professional certifications.">
-  <title>Achievements | Nasor Hidar</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nasor Hidar's Achievements — IEEEXtreme 20.0 2nd in Bangladesh (Global 908), NASA Space Apps Galactic Problem Solver, ICPC, Codeforces 1254, and Certifications.">
+  <title>Achievements &amp; Honors | Nasor Hidar</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Achievements & Honors | Nasor Hidar">
+  <meta property="og:description" content="Competitive programming milestones, international programming marathons, and professional cybersecurity certifications.">
+  <meta property="og:image" content="./preview.png">
+
+  <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
+  <!-- CDNs: Tailwind, FontAwesome -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Importmap for Three.js ES Module -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+      }
+    }
+  </script>
 </head>
-<body class="bg-[#020817] text-slate-50 grid-bg">
+<body data-scene="achievements" class="bg-[#06070d] text-slate-100 selection:bg-cyan-500 selection:text-slate-950">
 
-<!-- PAGE HERO -->
-<section class="relative pt-36 pb-0 px-6 overflow-hidden">
-  <div class="orb w-[500px] h-[500px] bg-amber-500 opacity-[0.06]" style="top:-15%;right:-8%"></div>
-  <div class="orb w-72 h-72 bg-cyan-500 opacity-[0.07]" style="bottom:0;left:-5%"></div>
-  <div class="max-w-6xl mx-auto relative z-10">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center min-h-[420px]">
-      <!-- Text -->
-      <div class="pb-16 lg:pb-20">
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-amber-500/30 bg-amber-500/5 text-amber-400 text-sm font-medium mb-6" data-aos>
-          <i class="fas fa-trophy mr-1"></i>Achievements &amp; Competitive Programming
+  <!-- 3D WebGL Background Canvas -->
+  <canvas id="webgl-canvas"></canvas>
+
+  <!-- Cyber Spatial Grid Overlay -->
+  <div class="cyber-grid-overlay"></div>
+
+  <!-- HERO SECTION ────────────────────────────────────────────────────────── -->
+  <section class="relative pt-36 pb-16 px-6 z-10 overflow-hidden">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <div class="lg:col-span-8">
+          <div class="hero-animate inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-amber-500/30 bg-amber-950/30 text-amber-400 text-xs font-mono font-medium mb-6 backdrop-blur-md">
+            <i class="fas fa-trophy text-xs"></i>
+            <span>Verified Honors &amp; Ratings</span>
+          </div>
+
+          <h1 class="hero-animate font-display text-5xl sm:text-6xl font-extrabold text-white tracking-tight leading-[1.1] mb-6">
+            Achievements &amp;<br>
+            <span class="gradient-text">Algorithmic Triumphs</span>
+          </h1>
+
+          <p class="hero-animate text-slate-400 text-base sm:text-lg max-w-2xl leading-relaxed">
+            From 24-hour global algorithmic marathons and NASA Space Apps innovation to rigorous professional cybersecurity and AI certifications.
+          </p>
         </div>
-        <h1 class="text-5xl md:text-6xl font-black text-white leading-tight mb-5" data-aos data-aos-delay="100">
-          Achievements<br>&amp; <span class="gradient-text">CP</span>
-        </h1>
-        <p class="text-slate-400 text-lg leading-relaxed max-w-xl" data-aos data-aos-delay="200">
-          Competitive programming ratings, international contest participations, and professional certifications.
+
+        <div class="lg:col-span-4 hidden lg:flex justify-end">
+          <div class="tilt-card p-4 max-w-xs border border-white/10 backdrop-blur-xl">
+            <img src="./hero_achievements.png" alt="Achievements Cyber Visual" class="rounded-xl w-full object-cover opacity-85 hover:opacity-100 transition-opacity" loading="lazy">
+            <div class="mt-3 text-center">
+              <span class="text-[11px] font-mono text-amber-400/80">3D Celestial Gyro &middot; Milestone Orbit</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PINNACLE MARATHON & INTERNATIONAL HONORS ────────────────────────────── -->
+  <section class="py-10 pb-16 px-6 relative z-10">
+    <div class="max-w-6xl mx-auto space-y-8">
+      
+      <!-- Crown Honor 1: IEEEXtreme 20.0 (2nd in Bangladesh) -->
+      <div class="tilt-card p-8 sm:p-10 border-amber-500/30 bg-gradient-to-r from-amber-950/20 via-slate-900/50 to-slate-900/70">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+          <div class="flex items-start gap-5">
+            <div class="w-16 h-16 rounded-2xl bg-amber-500/15 border border-amber-500/30 text-amber-400 text-3xl flex items-center justify-center flex-shrink-0 translate-z-sm">
+              🏆
+            </div>
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-2">
+                <span class="tech-pill text-xs font-bold text-amber-300 border-amber-500/30 bg-amber-500/10">
+                  Global Hackathon / Marathon
+                </span>
+                <span class="tech-pill text-xs">Team JUx404NOTFOUND</span>
+              </div>
+              <h2 class="font-display text-2xl sm:text-3xl font-bold text-white">
+                2nd Place in Bangladesh &middot; Global Rank 908
+              </h2>
+              <p class="text-cyan-400 font-mono text-xs sm:text-sm mt-1">
+                IEEEXtreme 20.0 &middot; 24-Hour Virtual Global Programming Competition
+              </p>
+              <p class="text-slate-300 text-sm mt-3 leading-relaxed max-w-3xl">
+                Competed alongside thousands of competitive programming teams globally in a grueling 24-hour continuous algorithmic marathon, solving complex dynamic programming, graph traversal, and combinatorics challenges to place <strong class="text-white">#2 in Bangladesh</strong>.
+              </p>
+            </div>
+          </div>
+          <div class="text-left lg:text-right font-mono flex-shrink-0">
+            <p class="text-amber-400 font-bold text-2xl sm:text-3xl">Rank 2 (BD)</p>
+            <p class="text-slate-400 text-xs">Global Rank 908</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Crown Honor 2: NASA Space Apps Galactic Problem Solver -->
+      <div class="tilt-card p-8 sm:p-10 border-cyan-500/30 bg-gradient-to-r from-cyan-950/20 via-slate-900/50 to-slate-900/70">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+          <div class="flex items-start gap-5">
+            <div class="w-16 h-16 rounded-2xl bg-cyan-500/15 border border-cyan-500/30 text-cyan-400 text-3xl flex items-center justify-center flex-shrink-0 translate-z-sm">
+              🚀
+            </div>
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-2">
+                <span class="tech-pill tech-pill-cyan text-xs font-bold">NASA Space Apps Challenge 2026</span>
+                <span class="tech-pill text-xs">Team Nokkhotro &middot; Nov 14&ndash;15, 2026</span>
+              </div>
+              <h2 class="font-display text-2xl sm:text-3xl font-bold text-white">
+                Galactic Problem Solver Recognition
+              </h2>
+              <p class="text-cyan-400 font-mono text-xs sm:text-sm mt-1">
+                Human-Centered AI &middot; Project Krishi Bondhu AI
+              </p>
+              <p class="text-slate-300 text-sm mt-3 leading-relaxed max-w-3xl">
+                Engineered an intelligent multi-agent agronomic platform synthesizing satellite telemetry and machine learning models for climate-resilient crop rotation, earning the international <strong class="text-white">Galactic Problem Solver</strong> title.
+              </p>
+            </div>
+          </div>
+          <div class="text-left lg:text-right font-mono flex-shrink-0">
+            <p class="text-cyan-300 font-bold text-xl sm:text-2xl">Galactic Solver</p>
+            <p class="text-slate-400 text-xs">NASA Global Honor</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- COMPETITIVE PROGRAMMING DASHBOARD ─────────────────────────────────── -->
+  <section class="py-12 px-6 relative z-10">
+    <div class="max-w-6xl mx-auto">
+      
+      <div class="text-center mb-14">
+        <span class="tech-pill tech-pill-cyan mb-2">Algorithmic Rigour</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white">
+          Competitive Programming <span class="gradient-text">Telemetry</span>
+        </h2>
+        <p class="text-slate-400 text-sm max-w-xl mx-auto mt-2">
+          500+ problems solved across online judges with contest rankings on Codeforces, CodeChef, and ICPC.
         </p>
-        <div class="flex flex-wrap gap-3 mt-7" data-aos data-aos-delay="300">
-          <span class="badge badge-amber"><i class="fas fa-code mr-1"></i>CF Rating 1254</span>
-          <span class="badge badge-cyan"><i class="fas fa-trophy mr-1"></i>ICPC 2023 &amp; 2025</span>
-          <span class="badge badge-green"><i class="fas fa-certificate mr-1"></i>3 Certifications</span>
-        </div>
       </div>
-      <!-- Hero Image -->
-      <div class="hidden lg:flex items-end justify-end h-full" data-aos="fade-left" data-aos-delay="200">
-        <div class="relative w-full max-w-lg">
-          <div class="absolute inset-0 rounded-3xl" style="background:radial-gradient(ellipse at center,rgba(251,191,36,0.10) 0%,transparent 70%)"></div>
-          <img src="hero_achievements.png" alt="Achievements and competitive programming visualization" class="w-full rounded-3xl relative z-10" style="filter:drop-shadow(0 0 40px rgba(251,191,36,0.15))">
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="absolute bottom-0 left-0 right-0 h-24" style="background:linear-gradient(to bottom,transparent,#020817)"></div>
-</section>
 
-<!-- CP DASHBOARD -->
-<section class="py-20 px-6">
-  <div class="max-w-5xl mx-auto">
-    <div class="text-center mb-14" data-aos>
-      <span class="badge badge-cyan mb-3"><i class="fas fa-keyboard mr-1"></i>Competitive Programming</span>
-      <h2 class="text-3xl md:text-4xl font-black text-white mt-3">CP <span class="gradient-text">Dashboard</span></h2>
-      <div class="section-divider"></div>
-    </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <!-- Codeforces -->
-      <div class="glow-card glow-card-featured p-8" data-aos data-aos-delay="100">
-        <div class="flex items-center justify-between mb-6">
-          <div class="flex items-center gap-3">
-            <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl" style="background:rgba(30,144,255,.1);border:1px solid rgba(30,144,255,.25)">🏆</div>
-            <div>
-              <h3 class="text-xl font-black text-white">Codeforces</h3>
-              <p class="text-slate-500 text-sm">Undefined_Code</p>
+        <!-- Codeforces Card -->
+        <div class="tilt-card p-8">
+          <div class="flex items-center justify-between mb-6">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400 text-2xl flex items-center justify-center font-mono font-bold">
+                CF
+              </div>
+              <div>
+                <h3 class="font-display font-bold text-xl text-white">Codeforces</h3>
+                <a href="https://codeforces.com/profile/Undefined_Code" target="_blank" rel="noopener noreferrer" class="text-cyan-400 font-mono text-xs hover:underline">
+                  @Undefined_Code &rarr;
+                </a>
+              </div>
+            </div>
+            <span class="tech-pill text-blue-400 border-blue-500/30 bg-blue-500/10 font-bold">
+              Pupil (1254)
+            </span>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4 mb-6">
+            <div class="p-4 rounded-xl bg-slate-900/80 border border-white/5">
+              <p class="text-[11px] font-mono text-slate-500 uppercase">Max Rating</p>
+              <p class="font-mono text-3xl font-extrabold text-white mt-1" data-counter="1254">1254</p>
+            </div>
+            <div class="p-4 rounded-xl bg-slate-900/80 border border-white/5">
+              <p class="text-[11px] font-mono text-slate-500 uppercase">Problems Solved</p>
+              <p class="font-mono text-3xl font-extrabold text-cyan-400 mt-1" data-counter="500" data-suffix="+">500+</p>
             </div>
           </div>
-          <span class="badge" style="background:rgba(30,144,255,.1);color:#60a5fa;border-color:rgba(30,144,255,.25)">Pupil</span>
-        </div>
 
-        <div class="grid grid-cols-2 gap-6 mb-7">
-          <div>
-            <p class="text-slate-500 text-xs uppercase tracking-widest mb-2">Rating</p>
-            <p class="stat-number gradient-text text-5xl">1254</p>
-          </div>
-          <div>
-            <p class="text-slate-500 text-xs uppercase tracking-widest mb-2">Solved</p>
-            <p class="stat-number gradient-text text-5xl">500+</p>
-          </div>
-        </div>
-
-        <div class="mb-6">
-          <div class="flex justify-between text-xs text-slate-500 mb-2">
-            <span>Progress to Specialist (1400)</span>
-            <span class="text-cyan-400 font-semibold">1254 / 1400</span>
-          </div>
-          <div class="rating-bar"><div class="rating-fill" data-width="89.6%"></div></div>
-        </div>
-
-        <a href="https://codeforces.com/profile/Undefined_Code" target="_blank" id="cf-profile" class="w-full py-3 flex items-center justify-center gap-2 rounded-xl border border-slate-700 hover:border-cyan-500/50 text-white hover:text-cyan-400 font-semibold text-sm transition-all duration-300 hover:-translate-y-0.5">
-          <i class="fas fa-external-link-alt text-xs"></i>View Profile
-        </a>
-      </div>
-
-      <!-- CodeChef -->
-      <div class="glow-card glow-card-featured p-8" data-aos data-aos-delay="200">
-        <div class="flex items-center justify-between mb-6">
-          <div class="flex items-center gap-3">
-            <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl" style="background:rgba(139,92,246,.1);border:1px solid rgba(139,92,246,.25)">⭐</div>
-            <div>
-              <h3 class="text-xl font-black text-white">CodeChef</h3>
-              <p class="text-slate-500 text-sm">undefined_code</p>
+          <div class="space-y-1.5 font-mono text-xs">
+            <div class="flex justify-between text-slate-400">
+              <span>Path to Specialist</span>
+              <span class="text-cyan-400 font-semibold">1254 / 1400</span>
+            </div>
+            <div class="w-full h-2 rounded-full bg-slate-800 overflow-hidden">
+              <div class="h-full bg-gradient-to-r from-indigo-500 to-cyan-400 rounded-full" style="width: 89.5%"></div>
             </div>
           </div>
-          <span class="badge badge-indigo">2★ Rated</span>
         </div>
 
-        <div class="grid grid-cols-2 gap-6 mb-7">
+        <!-- CodeChef Card -->
+        <div class="tilt-card p-8">
+          <div class="flex items-center justify-between mb-6">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 text-2xl flex items-center justify-center font-mono font-bold">
+                CC
+              </div>
+              <div>
+                <h3 class="font-display font-bold text-xl text-white">CodeChef</h3>
+                <a href="https://www.codechef.com/users/undefined_code" target="_blank" rel="noopener noreferrer" class="text-amber-400 font-mono text-xs hover:underline">
+                  @undefined_code &rarr;
+                </a>
+              </div>
+            </div>
+            <span class="tech-pill text-amber-400 border-amber-500/30 bg-amber-500/10 font-bold">
+              2★ Rated (1244)
+            </span>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4 mb-6">
+            <div class="p-4 rounded-xl bg-slate-900/80 border border-white/5">
+              <p class="text-[11px] font-mono text-slate-500 uppercase">Max Rating</p>
+              <p class="font-mono text-3xl font-extrabold text-white mt-1" data-counter="1244">1244</p>
+            </div>
+            <div class="p-4 rounded-xl bg-slate-900/80 border border-white/5">
+              <p class="text-[11px] font-mono text-slate-500 uppercase">Problems Solved</p>
+              <p class="font-mono text-3xl font-extrabold text-amber-400 mt-1" data-counter="50" data-suffix="+">50+</p>
+            </div>
+          </div>
+
+          <div class="space-y-1.5 font-mono text-xs">
+            <div class="flex justify-between text-slate-400">
+              <span>Path to 3★</span>
+              <span class="text-amber-400 font-semibold">1244 / 1400</span>
+            </div>
+            <div class="w-full h-2 rounded-full bg-slate-800 overflow-hidden">
+              <div class="h-full bg-gradient-to-r from-amber-500 to-yellow-400 rounded-full" style="width: 88.8%"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Major Regional Contests Roster -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        
+        <div class="tilt-card p-5">
+          <div class="text-indigo-400 text-lg mb-2"><i class="fas fa-flag-checkered"></i></div>
+          <h4 class="font-display font-bold text-white text-sm">ICPC Regional</h4>
+          <p class="text-slate-400 text-xs mt-1">Asia Dhaka Preliminary Contestant (2023 &amp; 2025 editions)</p>
+        </div>
+
+        <div class="tilt-card p-5">
+          <div class="text-cyan-400 text-lg mb-2"><i class="fas fa-bolt"></i></div>
+          <h4 class="font-display font-bold text-white text-sm">IEEEXtreme 19.0 &amp; 20.0</h4>
+          <p class="text-slate-400 text-xs mt-1">24-hour global marathon; 2nd in Bangladesh in 20.0</p>
+        </div>
+
+        <div class="tilt-card p-5">
+          <div class="text-purple-400 text-lg mb-2"><i class="fas fa-user-secret"></i></div>
+          <h4 class="font-display font-bold text-white text-sm">BUET CSE Fest CTF 2026</h4>
+          <p class="text-slate-400 text-xs mt-1">Capture The Flag cybersecurity challenge contestant</p>
+        </div>
+
+        <div class="tilt-card p-5">
+          <div class="text-emerald-400 text-lg mb-2"><i class="fas fa-lightbulb"></i></div>
+          <h4 class="font-display font-bold text-white text-sm">BUP CSE Fest 2026</h4>
+          <p class="text-slate-400 text-xs mt-1">Intensive university hackathon participant</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SCHOLARSHIPS & LEADERSHIP HONORS ───────────────────────────────── -->
+  <section class="py-12 px-6 relative z-10 border-t border-white/5">
+    <div class="max-w-6xl mx-auto">
+      
+      <div class="text-center mb-12">
+        <span class="tech-pill tech-pill-cyan mb-2">Institutional Recognition</span>
+        <h2 class="font-display text-3xl font-extrabold text-white">
+          Scholarships &amp; <span class="gradient-text">Leadership Honors</span>
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- Scholarship: Academic Performance Scholarship JU -->
+        <div class="tilt-card p-6 flex flex-col justify-between">
           <div>
-            <p class="text-slate-500 text-xs uppercase tracking-widest mb-2">Rating</p>
-            <p class="stat-number gradient-text text-5xl">1244</p>
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xl flex items-center justify-center mb-4 translate-z-sm">
+              🎓
+            </div>
+            <span class="tech-pill tech-pill-emerald text-[11px] mb-2">Academic Merit</span>
+            <h3 class="font-display text-lg font-bold text-white mb-1">Academic Performance Scholarship</h3>
+            <p class="text-cyan-400 font-mono text-xs mb-3">Jahangirnagar University &middot; 2nd Year (3.73 CGPA)</p>
+            <p class="text-slate-400 text-xs leading-relaxed">
+              Awarded institutional scholarship honors in recognition of ranking at the top tier of the Information and Communication Technology cohort with an outstanding 3.73 CGPA during the 2nd academic year.
+            </p>
           </div>
+          <div class="pt-3 mt-4 border-t border-white/5 font-mono text-[11px] text-slate-500">
+            <span>Department of ICT</span>
+          </div>
+        </div>
+
+        <!-- Leadership: IEEE Student Branch JU -->
+        <div class="tilt-card p-6 flex flex-col justify-between">
           <div>
-            <p class="text-slate-500 text-xs uppercase tracking-widest mb-2">Solved</p>
-            <p class="stat-number gradient-text text-5xl">50+</p>
+            <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xl flex items-center justify-center mb-4 translate-z-sm">
+              ⚡
+            </div>
+            <span class="tech-pill text-[11px] mb-2">Executive Committee</span>
+            <h3 class="font-display text-lg font-bold text-white mb-1">Treasurer &middot; IEEE Student Branch JU</h3>
+            <p class="text-indigo-400 font-mono text-xs mb-3">Feb 2026 &ndash; Present (Member since Nov 2023)</p>
+            <p class="text-slate-400 text-xs leading-relaxed">
+              Directing financial administration, sponsorship acquisitions, and operational execution for university-wide hackathons, technology symposiums, and competitive programming bootcamps.
+            </p>
+          </div>
+          <div class="pt-3 mt-4 border-t border-white/5 font-mono text-[11px] text-slate-500">
+            <span>IEEE Student Activities</span>
           </div>
         </div>
 
-        <div class="mb-6">
-          <div class="flex justify-between text-xs text-slate-500 mb-2">
-            <span>Progress to 3★ (1400)</span>
-            <span class="text-cyan-400 font-semibold">1244 / 1400</span>
+        <!-- Volunteering: Futurenation UNDP -->
+        <div class="tilt-card p-6 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xl flex items-center justify-center mb-4 translate-z-sm">
+              🤝
+            </div>
+            <span class="tech-pill tech-pill-cyan text-[11px] mb-2">Youth Empowerment</span>
+            <h3 class="font-display text-lg font-bold text-white mb-1">National Volunteer &middot; Futurenation</h3>
+            <p class="text-cyan-400 font-mono text-xs mb-3">Apr 2026 &ndash; Present &middot; UNDP &amp; Grameenphone</p>
+            <p class="text-slate-400 text-xs leading-relaxed">
+              Volunteering in nationwide youth capability initiatives providing digital training, technology education, and economic empowerment frameworks under the United Nations Development Programme.
+            </p>
           </div>
-          <div class="rating-bar"><div class="rating-fill" data-width="88.9%"></div></div>
+          <div class="pt-3 mt-4 border-t border-white/5 font-mono text-[11px] text-slate-500">
+            <span>UNDP Bangladesh</span>
+          </div>
         </div>
 
-        <a href="https://www.codechef.com/users/undefined_code" target="_blank" id="cc-profile" class="w-full py-3 flex items-center justify-center gap-2 rounded-xl border border-slate-700 hover:border-cyan-500/50 text-white hover:text-cyan-400 font-semibold text-sm transition-all duration-300 hover:-translate-y-0.5">
-          <i class="fas fa-external-link-alt text-xs"></i>View Profile
-        </a>
-      </div>
-    </div>
-
-    <!-- Combined stat bar -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-5 mt-8" data-aos data-aos-delay="300">
-      <div class="glass-static p-5 text-center"><p class="stat-number gradient-text text-3xl">550+</p><p class="text-slate-500 text-xs mt-1">Total Solved</p></div>
-      <div class="glass-static p-5 text-center"><p class="stat-number gradient-text text-3xl">~1250</p><p class="text-slate-500 text-xs mt-1">Avg. Rating</p></div>
-      <div class="glass-static p-5 text-center"><p class="stat-number gradient-text text-3xl">4</p><p class="text-slate-500 text-xs mt-1">Contests</p></div>
-      <div class="glass-static p-5 text-center"><p class="stat-number gradient-text text-3xl">2+</p><p class="text-slate-500 text-xs mt-1">Platforms</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTESTS -->
-<section class="py-20 px-6" style="background:linear-gradient(to bottom,rgba(6,182,212,.025),transparent)">
-  <div class="max-w-5xl mx-auto">
-    <div class="text-center mb-14" data-aos>
-      <span class="badge badge-amber mb-3"><i class="fas fa-medal mr-1"></i>Contests</span>
-      <h2 class="text-3xl md:text-4xl font-black text-white mt-3">Contest <span class="gradient-text">Participations</span></h2>
-      <div class="section-divider"></div>
-    </div>
-
-    <div class="relative">
-      <!-- Timeline line -->
-      <div class="absolute left-5 md:left-1/2 top-0 bottom-0 w-px bg-slate-800 -translate-x-px"></div>
-
-      <div class="flex flex-col gap-10">
-        <!-- ICPC 2025 -->
-        <div class="relative pl-14 md:pl-0 md:grid md:grid-cols-2 md:gap-16" data-aos data-aos-delay="100">
-          <div class="md:text-right md:pr-12">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-semibold mb-3">2025</div>
-            <h3 class="text-xl font-bold text-white mb-2">ICPC Asia Dhaka Regional Preliminary</h3>
-            <p class="text-slate-400 text-sm leading-relaxed">International Collegiate Programming Contest — Asia Dhaka Regional site. Competing as a team in one of the world's most prestigious programming contests.</p>
-            <div class="flex flex-wrap gap-2 mt-3 md:justify-end"><span class="badge badge-amber">ICPC</span><span class="tech-tag">Algorithms</span><span class="tech-tag">Team Contest</span></div>
-          </div>
-          <div class="hidden md:block">
-            <div class="absolute left-1/2 top-1 w-4 h-4 rounded-full bg-amber-400 border-4 border-[#020817] -translate-x-1/2 shadow-lg shadow-amber-500/30"></div>
-          </div>
-          <div class="absolute left-3 top-1 md:hidden w-4 h-4 rounded-full bg-amber-400 border-4 border-[#020817]"></div>
-        </div>
-
-        <!-- IEEE Xtreme -->
-        <div class="relative pl-14 md:pl-0 md:grid md:grid-cols-2 md:gap-16" data-aos data-aos-delay="150">
-          <div class="md:col-start-2 md:pl-12">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold mb-3">2025</div>
-            <h3 class="text-xl font-bold text-white mb-2">IEEE Xtreme 19.0</h3>
-            <p class="text-slate-400 text-sm leading-relaxed">24-hour global programming competition organized by IEEE, competing against thousands of student teams worldwide across algorithmic and engineering challenges.</p>
-            <div class="flex flex-wrap gap-2 mt-3"><span class="badge badge-cyan">IEEE Xtreme</span><span class="tech-tag">24h Contest</span><span class="tech-tag">Global</span></div>
-          </div>
-          <div class="hidden md:block">
-            <div class="absolute left-1/2 top-1 w-4 h-4 rounded-full bg-cyan-400 border-4 border-[#020817] -translate-x-1/2 shadow-lg shadow-cyan-500/30"></div>
-          </div>
-          <div class="absolute left-3 top-1 md:hidden w-4 h-4 rounded-full bg-cyan-400 border-4 border-[#020817]"></div>
-        </div>
-
-        <!-- ICPC 2023 -->
-        <div class="relative pl-14 md:pl-0 md:grid md:grid-cols-2 md:gap-16" data-aos data-aos-delay="200">
-          <div class="md:text-right md:pr-12">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-400 text-xs font-semibold mb-3">2023</div>
-            <h3 class="text-xl font-bold text-white mb-2">ICPC Asia Dhaka Regional Preliminary</h3>
-            <p class="text-slate-400 text-sm leading-relaxed">First ICPC appearance — Asia Dhaka Regional Preliminary. A milestone achievement in competitive programming career, solving complex algorithmic problems under time pressure.</p>
-            <div class="flex flex-wrap gap-2 mt-3 md:justify-end"><span class="badge badge-teal">ICPC</span><span class="tech-tag">First ICPC</span><span class="tech-tag">Dhaka</span></div>
-          </div>
-          <div class="hidden md:block">
-            <div class="absolute left-1/2 top-1 w-4 h-4 rounded-full bg-teal-400 border-4 border-[#020817] -translate-x-1/2 shadow-lg shadow-teal-500/30"></div>
-          </div>
-          <div class="absolute left-3 top-1 md:hidden w-4 h-4 rounded-full bg-teal-400 border-4 border-[#020817]"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CERTIFICATIONS -->
-<section class="py-20 px-6">
-  <div class="max-w-5xl mx-auto">
-    <div class="text-center mb-14" data-aos>
-      <span class="badge badge-green mb-3"><i class="fas fa-certificate mr-1"></i>Certifications</span>
-      <h2 class="text-3xl md:text-4xl font-black text-white mt-3">Professional <span class="gradient-text">Certifications</span></h2>
-      <div class="section-divider"></div>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <!-- AWCP -->
-      <div class="glass p-7 flex flex-col" data-aos data-aos-delay="100">
-        <div class="w-12 h-12 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-2xl mb-5">🌐</div>
-        <div class="flex-1">
-          <h3 class="text-white font-bold text-lg mb-1">Arena Web Certified Professional</h3>
-          <p class="text-slate-500 text-sm mb-4">AWCP · Web Development Certification</p>
-          <div class="font-mono text-xs text-slate-600 bg-slate-800/50 px-3 py-2 rounded-lg mb-4">ID: A58W0302S061</div>
-          <div class="flex flex-wrap gap-2"><span class="tech-tag">Web Dev</span><span class="tech-tag">Frontend</span></div>
-        </div>
-        <div class="mt-5 pt-5 border-t border-slate-800">
-          <span class="badge badge-cyan text-xs"><i class="fas fa-check mr-1"></i>Verified</span>
-        </div>
       </div>
 
-      <!-- HackerRank SE Intern -->
-      <div class="glass p-7 flex flex-col" data-aos data-aos-delay="200">
-        <div class="w-12 h-12 rounded-2xl bg-green-500/10 border border-green-500/20 flex items-center justify-center text-2xl mb-5">💼</div>
-        <div class="flex-1">
-          <h3 class="text-white font-bold text-lg mb-1">Software Engineer Intern Role</h3>
-          <p class="text-slate-500 text-sm mb-4">HackerRank · Role Certification</p>
-          <div class="font-mono text-xs text-slate-600 bg-slate-800/50 px-3 py-2 rounded-lg mb-4">ID: OD02023FD131</div>
-          <div class="flex flex-wrap gap-2"><span class="tech-tag">Problem Solving</span><span class="tech-tag">SQL</span></div>
-        </div>
-        <div class="mt-5 pt-5 border-t border-slate-800">
-          <span class="badge badge-green text-xs"><i class="fas fa-check mr-1"></i>Verified</span>
-        </div>
+    </div>
+  </section>
+
+  <!-- PROFESSIONAL CERTIFICATIONS ────────────────────────────────────────── -->
+  <section class="py-16 pb-28 px-6 relative z-10 border-t border-white/5 bg-slate-950/40">
+    <div class="max-w-6xl mx-auto">
+      
+      <div class="text-center mb-14">
+        <span class="tech-pill tech-pill-cyan mb-2">Verified Credentials</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white">
+          Professional <span class="gradient-text">Certifications</span>
+        </h2>
       </div>
 
-      <!-- HackerRank Python -->
-      <div class="glass p-7 flex flex-col" data-aos data-aos-delay="300">
-        <div class="w-12 h-12 rounded-2xl bg-yellow-500/10 border border-yellow-500/20 flex items-center justify-center text-2xl mb-5">🐍</div>
-        <div class="flex-1">
-          <h3 class="text-white font-bold text-lg mb-1">Python (Basic) Skill Certification</h3>
-          <p class="text-slate-500 text-sm mb-4">HackerRank · Python Proficiency</p>
-          <div class="font-mono text-xs text-slate-600 bg-slate-800/50 px-3 py-2 rounded-lg mb-4">ID: 8A87793A29F3</div>
-          <div class="flex flex-wrap gap-2"><span class="tech-tag">Python</span><span class="tech-tag">Scripting</span></div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- Stanford Code in Place -->
+        <div class="tilt-card p-6 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-red-500/10 border border-red-500/20 text-red-400 text-lg flex items-center justify-center mb-4">
+              <i class="fas fa-university"></i>
+            </div>
+            <h3 class="font-display font-bold text-white text-lg mb-1">Stanford University</h3>
+            <p class="text-cyan-400 font-mono text-xs mb-3">Code in Place &middot; Probability for AI</p>
+            <p class="text-slate-400 text-xs leading-relaxed">
+              Rigorous coursework in computational probability theory, stochastic models, Bayesian inference, and their foundational applications in Machine Learning.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-white/5 font-mono text-[11px] text-slate-500 flex justify-between">
+            <span>Stanford Online</span>
+            <span class="text-slate-400">Oct 2026</span>
+          </div>
         </div>
-        <div class="mt-5 pt-5 border-t border-slate-800">
-          <span class="badge badge-amber text-xs"><i class="fas fa-check mr-1"></i>Verified</span>
+
+        <!-- HackerRank SWE Intern -->
+        <div class="tilt-card p-6 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-lg flex items-center justify-center mb-4">
+              <i class="fas fa-terminal"></i>
+            </div>
+            <h3 class="font-display font-bold text-white text-lg mb-1">HackerRank</h3>
+            <p class="text-emerald-400 font-mono text-xs mb-3">Software Engineer Intern Certified</p>
+            <p class="text-slate-400 text-xs leading-relaxed">
+              Standardized industry assessment covering algorithms, data structures, SQL optimization, and asynchronous systems logic.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-white/5 font-mono text-[11px] text-slate-500 flex justify-between">
+            <span>ID: OD02023FD131</span>
+            <span class="text-slate-400">Mar 2026</span>
+          </div>
         </div>
+
+        <!-- Arena Web Security -->
+        <div class="tilt-card p-6 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400 text-lg flex items-center justify-center mb-4">
+              <i class="fas fa-user-shield"></i>
+            </div>
+            <h3 class="font-display font-bold text-white text-lg mb-1">Arena Web Security</h3>
+            <p class="text-purple-300 font-mono text-xs mb-3">Cyber Security &amp; Ethical Hacking (AWCP / VAPT)</p>
+            <p class="text-slate-400 text-xs leading-relaxed">
+              Comprehensive hands-on training in Vulnerability Assessment and Penetration Testing (VAPT), Burp Suite workflows, network packet inspection, and web exploitation defenses.
+            </p>
+          </div>
+          <div class="pt-4 mt-4 border-t border-white/5 font-mono text-[11px] text-slate-500 flex justify-between">
+            <span>ID: A58W0302S061</span>
+            <span class="text-slate-400">Feb 2026</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER ─────────────────────────────────────────────────────────────── -->
+  <footer class="py-10 px-6 border-t border-white/5 relative z-10 bg-slate-950/80">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-500">
+      <p>&copy; 2026 <span class="text-white font-semibold">Nasor Hidar</span> &middot; Achievements &amp; Honors</p>
+      <div class="flex items-center gap-6">
+        <a href="index.html" class="hover:text-white transition-colors">Home</a>
+        <a href="projects.html" class="hover:text-cyan-400 transition-colors">Projects</a>
+        <a href="open-source.html" class="hover:text-cyan-400 transition-colors">Open Source</a>
+        <a href="Nasor_Hidar_Resume.pdf" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400 transition-colors">Resume</a>
       </div>
     </div>
-  </div>
-</section>
+  </footer>
 
-<!-- FOOTER -->
-<footer class="border-t border-slate-800/60 py-10 px-6">
-  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-    <p class="text-slate-500 text-sm">© 2026 <span class="text-white font-semibold">Nasor Hidar</span>. All rights reserved.</p>
-    <p class="text-slate-600 text-xs">Built with <span class="text-red-400">❤</span> Love.</p>
-    <div class="flex gap-5">
-      <a href="https://github.com/NasorHidar" target="_blank" class="text-slate-600 hover:text-cyan-400 transition-colors"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/nasor-hidar" target="_blank" class="text-slate-600 hover:text-cyan-400 transition-colors"><i class="fab fa-linkedin"></i></a>
-      <a href="mailto:nasorhidar@gmail.com" class="text-slate-600 hover:text-cyan-400 transition-colors"><i class="fas fa-envelope"></i></a>
-    </div>
-  </div>
-</footer>
-
-<script src="nav.js"></script>
-<script src="script.js"></script>
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="nav.js"></script>
+  <script type="module" src="scene3d.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
